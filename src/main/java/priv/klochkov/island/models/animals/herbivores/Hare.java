@@ -1,4 +1,5 @@
 package priv.klochkov.island;
 
-public class Animal {
+//zayac
+public class Hare {
 }
