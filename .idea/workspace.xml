@@ -5,15 +5,55 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0039d95b-3814-478f-bb39-4fe01bc23792" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/animals/probability/wolf.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/models/animals/Animal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/models/animals/Animal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/models/animals/herbivores/Boar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/models/animals/herbivores/Boar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/models/animals/herbivores/Buffalo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/models/animals/herbivores/Buffalo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/models/animals/herbivores/Caterpillar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/models/animals/herbivores/Caterpillar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/models/animals/herbivores/Deer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/models/animals/herbivores/Deer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/models/animals/herbivores/Duck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/models/animals/herbivores/Duck.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/models/animals/herbivores/Goat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/models/animals/herbivores/Goat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/models/animals/herbivores/Hare.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/models/animals/herbivores/Hare.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/models/animals/herbivores/Herbivore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/models/animals/herbivores/Herbivore.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/models/animals/herbivores/Horse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/models/animals/herbivores/Horse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/models/animals/herbivores/Mouse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/models/animals/herbivores/Mouse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/models/animals/herbivores/Sheep.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/models/animals/herbivores/Sheep.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/models/animals/predators/Bear.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/models/animals/predators/Bear.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/models/animals/predators/Eagle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/models/animals/predators/Eagle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/models/animals/predators/Fox.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/models/animals/predators/Fox.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/models/animals/predators/Predator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/models/animals/predators/Predator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/models/animals/predators/Snake.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/models/animals/predators/Snake.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/models/animals/predators/Wolf.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/models/animals/predators/Wolf.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/models/plants/Plant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/models/plants/Plant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/reader/PropertiesReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/reader/PropertiesReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/reader/PropertiesWolfReader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/animals/wolf.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/animals/probability/snake.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2H0ZVDJQZmgYdcda8dvLe4JAJZ5" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -26,9 +66,40 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true"
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "/home/vladimir/JavaRushInstitute/island",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "project.propCompiler"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/animals/probability" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Wolf" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="priv.klochkov.island.models.animals.predators.Wolf" />
+      <module name="island" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="priv.klochkov.island.models.animals.predators.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Wolf" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -50,5 +121,26 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/priv/klochkov/island/models/animals/Animal.java</url>
+          <line>19</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/priv/klochkov/island/models/animals/Animal.java</url>
+          <line>18</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/priv/klochkov/island/models/animals/predators/Wolf.java</url>
+          <line>13</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

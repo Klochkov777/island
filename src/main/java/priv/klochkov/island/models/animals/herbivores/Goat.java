@@ -1,4 +1,8 @@
 package priv.klochkov.island.models.animals.herbivores;
 
-public class Goat {
+//koza
+public class Goat extends Herbivore {
+    public Goat(String fileNameProbabilityEat) {
+        super(fileNameProbabilityEat);
+    }
 }

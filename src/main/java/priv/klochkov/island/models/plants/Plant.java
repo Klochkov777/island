@@ -1,2 +1,4 @@
-package priv.klochkov.island.models.plants;public class Plant {
+package priv.klochkov.island.models.plants;
+
+public class Plant {
 }
