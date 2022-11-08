@@ -5,31 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0039d95b-3814-478f-bb39-4fe01bc23792" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/animals/probability/wolf.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/controller/Controller.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/models/island/Island.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/models/island/Location.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/animals/probability/bear.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/animals/probability/boar.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/animals/probability/deer.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/animals/probability/eagle.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/animals/probability/fox.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/animals/probability/goat.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/animals/probability/hare.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/animals/probability/horse.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/animals/probability/mouse.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/animals/probability/sheep.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/models/animals/Animal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/models/animals/Animal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/models/animals/herbivores/Boar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/models/animals/herbivores/Boar.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/models/animals/herbivores/Buffalo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/models/animals/herbivores/Buffalo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/models/animals/herbivores/Caterpillar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/models/animals/herbivores/Caterpillar.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/models/animals/herbivores/Deer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/models/animals/herbivores/Deer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/models/animals/herbivores/Duck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/models/animals/herbivores/Duck.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/models/animals/herbivores/Goat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/models/animals/herbivores/Goat.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/models/animals/herbivores/Hare.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/models/animals/herbivores/Hare.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/models/animals/herbivores/Herbivore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/models/animals/herbivores/Herbivore.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/models/animals/herbivores/Horse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/models/animals/herbivores/Horse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/models/animals/herbivores/Mouse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/models/animals/herbivores/Mouse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/models/animals/herbivores/Sheep.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/models/animals/herbivores/Sheep.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/models/animals/predators/Bear.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/models/animals/predators/Bear.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/models/animals/predators/Eagle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/models/animals/predators/Eagle.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/models/animals/predators/Fox.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/models/animals/predators/Fox.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/models/animals/predators/Predator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/models/animals/predators/Predator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/models/animals/predators/Snake.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/models/animals/predators/Snake.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/models/animals/predators/Wolf.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/models/animals/predators/Wolf.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/models/plants/Plant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/models/plants/Plant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/reader/PropertiesReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/reader/PropertiesReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/reader/PropertiesWolfReader.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/animals/wolf.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/animals/probability/snake.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/animals/probability/snake.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/animals/probability/snake.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/animals/probability/wolf.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/animals/probability/wolf.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,18 +58,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "/home/vladimir/JavaRushInstitute/island",
-    "project.structure.last.edited": "Libraries",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "project.propCompiler"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/vladimir/JavaRushInstitute/island&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propCompiler&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/resources/animals/probability" />
@@ -127,17 +122,17 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/priv/klochkov/island/models/animals/Animal.java</url>
-          <line>19</line>
+          <line>27</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/priv/klochkov/island/models/animals/Animal.java</url>
-          <line>18</line>
+          <line>26</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/priv/klochkov/island/models/animals/predators/Wolf.java</url>
-          <line>13</line>
+          <line>18</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
