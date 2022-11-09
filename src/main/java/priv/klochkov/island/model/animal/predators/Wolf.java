@@ -20,6 +20,7 @@ public class Wolf extends Predator {
         for (Map.Entry<Class<? extends Animal>, Integer> entry: wolf.getProbabilityEatData().entrySet()){
             System.out.println(entry.getKey() + " = " + entry.getValue());
         }
+        System.out.println(wolf.getGender());
 
         System.out.println("\n\n\n");
 
@@ -28,8 +29,6 @@ public class Wolf extends Predator {
         for (Map.Entry<Class<? extends Animal>, Integer> entry: snake.getProbabilityEatData().entrySet()){
             System.out.println(entry.getKey() + " = " + entry.getValue());
         }
-
-
-        System.out.println(wolf.getNeedFoodKg());
+        System.out.println(snake.getGender());
     }
 }

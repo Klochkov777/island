@@ -10,7 +10,7 @@ public class Location {
     private static Map<Animal, Integer> maxQualityEveryKindAnimal;
     private List<Animal> animals = new ArrayList<>();
 
-    static {
-        maxQualityEveryKindAnimal.
-    }
+//    static {
+//        maxQualityEveryKindAnimal.
+//    }
 }
