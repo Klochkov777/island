@@ -51,4 +51,11 @@ public abstract class Animal {
     public Gender getGender() {
         return gender;
     }
+
+    @Override
+    public String toString() {
+        return "{" + this.getClass().getSimpleName() +
+                " gender=" + gender +
+                '}';
+    }
 }

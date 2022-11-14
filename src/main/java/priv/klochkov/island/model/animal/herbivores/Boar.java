@@ -4,7 +4,7 @@ import priv.klochkov.island.model.animal.interfaces.IEatableAnimal;
 
 //kaban
 public class Boar extends Herbivore implements IEatableAnimal {
-    public Boar(String fileNameProbabilityEat) {
+    public Boar() {
         super("animals/probability/boar.properties", 3, 30, 8);
     }
 }
