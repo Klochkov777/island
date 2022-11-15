@@ -1,4 +1,6 @@
 package priv.klochkov.island.model.plant;
 
-public class Plant {
+import priv.klochkov.island.model.Inhabitant;
+
+public class Plant extends Inhabitant {
 }

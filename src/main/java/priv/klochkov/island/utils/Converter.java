@@ -2,24 +2,25 @@ package priv.klochkov.island.utils;
 
 import org.reflections.Reflections;
 import org.reflections.scanners.SubTypesScanner;
+import priv.klochkov.island.model.animal.Animal;
 import priv.klochkov.island.reader.PropertiesReader;
 
 import java.util.*;
 
 public class Converter {
 
-    public static Map<String, Integer> convertPropertiesToMap(String fileNameProbabilityEat) {
+    public static Map<String, Float> convertPropertiesToMap(String fileNameProbabilityEat) {
         Properties properties = new PropertiesReader(fileNameProbabilityEat).getProperties();
-        HashMap<String, Integer> result = new HashMap<>();
+        HashMap<String, Float> result = new HashMap<>();
         for (Map.Entry<Object, Object> entry : properties.entrySet()) {
-            result.put(String.valueOf(entry.getKey()), Integer.valueOf(String.valueOf(entry.getValue())));
+            result.put(String.valueOf(entry.getKey()), Float.valueOf(String.valueOf(entry.getValue())));
         }
         return result;
     }
 
-    public static Map<Class<?>, Integer> convertKeysMapStringToClass(Map<String, Integer> map,
-                                                                              List<Class<?>> listClasses){
-        Map<Class<?>, Integer> result = new HashMap<>();
+    public static Map<Class<?>, Float> convertKeysMapStringToClass(Map<String, Float> map,
+                                                                   List<Class<? extends Animal>> listClasses){
+        Map<Class<?>, Float> result = new HashMap<>();
         for (Class<?> clazz : listClasses) {
             if (map.containsKey(clazz.getSimpleName())) {
                 result.put(clazz, map.get(clazz.getSimpleName()));

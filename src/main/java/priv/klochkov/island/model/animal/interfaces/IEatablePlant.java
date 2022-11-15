@@ -1,4 +1,4 @@
 package priv.klochkov.island.model.animal.interfaces;
 
-public interface IEatableAnimal extends IEatable {
+public interface IEatablePlant extends IEatable {
 }
