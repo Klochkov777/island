@@ -2,6 +2,7 @@ package priv.klochkov.island.utils;
 
 import org.reflections.Reflections;
 import org.reflections.scanners.SubTypesScanner;
+import priv.klochkov.island.model.Inhabitant;
 import priv.klochkov.island.model.animal.Animal;
 import priv.klochkov.island.reader.PropertiesReader;
 
