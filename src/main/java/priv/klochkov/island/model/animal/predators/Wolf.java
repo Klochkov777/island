@@ -1,9 +1,5 @@
 package priv.klochkov.island.model.animal.predators;
 
-import priv.klochkov.island.config.AnimalConfig;
-import priv.klochkov.island.model.animal.Animal;
-import java.util.Map;
-
 
 public class Wolf extends Predator {
 
@@ -15,7 +11,7 @@ public class Wolf extends Predator {
         Wolf wolf = new Wolf();
         System.out.println("Speed " + wolf.speedMovement);
         System.out.println("Weight " + wolf.weight);
-        System.out.println("NeedFoodKg " + wolf.needFoodKg);
+        System.out.println("NeedFoodKg " + wolf.maxSatiety);
         System.out.println();
     }
 }

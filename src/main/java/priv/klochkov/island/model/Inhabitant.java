@@ -6,4 +6,8 @@ public class Inhabitant {
     public Inhabitant(float weight) {
         this.weight = weight;
     }
+
+    public float getWeight() {
+        return weight;
+    }
 }

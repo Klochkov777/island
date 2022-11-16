@@ -5,15 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0039d95b-3814-478f-bb39-4fe01bc23792" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/config/LocationConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/constants/Direction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/controller/ControllerSettling.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/controller/Controller.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/model/Inhabitant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/model/Inhabitant.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/model/animal/Animal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/model/animal/Animal.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/model/animal/herbivores/Herbivore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/model/animal/herbivores/Herbivore.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/model/animal/interfaces/IEatable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/model/animal/interfaces/IEatable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/model/animal/predators/Predator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/model/animal/predators/Predator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/model/animal/predators/Wolf.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/model/animal/predators/Wolf.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/model/island/Island.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/model/island/Island.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/model/island/Location.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/model/island/Location.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/model/plant/Plant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/model/plant/Plant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/utils/Converter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/utils/Converter.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,9 +27,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Enum" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="Enum" />
       </list>
     </option>
   </component>
@@ -48,30 +52,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/vladimir/JavaRushInstitute/Test&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;project.propCompiler&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "/home/vladimir/JavaRushInstitute/island",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "project.propCompiler"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/resources/animals/probability" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Island">
-    <configuration name="AnimalConfig" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="priv.klochkov.island.config.AnimalConfig" />
+  <component name="RunManager" selected="Application.App">
+    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="priv.klochkov.island.App" />
       <module name="island" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="priv.klochkov.island.config.*" />
+          <option name="PATTERN" value="priv.klochkov.island.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -133,11 +137,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.App" />
         <item itemvalue="Application.Island" />
         <item itemvalue="Application.Location" />
         <item itemvalue="Application.LocationConfig" />
         <item itemvalue="Application.Wolf" />
-        <item itemvalue="Application.AnimalConfig" />
       </list>
     </recent_temporary>
   </component>
