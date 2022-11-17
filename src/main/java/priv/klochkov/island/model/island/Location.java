@@ -22,4 +22,12 @@ public class Location {
     public void setInhabitants(List<Inhabitant> inhabitants) {
         this.inhabitants = inhabitants;
     }
+
+    public int getX() {
+        return x;
+    }
+
+    public int getY() {
+        return y;
+    }
 }

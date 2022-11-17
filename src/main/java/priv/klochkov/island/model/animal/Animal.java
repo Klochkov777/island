@@ -19,13 +19,15 @@ public abstract class Animal extends Inhabitant implements IEatable {
     int x;
     int y;
 
-    public Animal(int speedMovement, int weight, float maxSatiety) {
+    public Animal(int speedMovement, int weight, float maxSatiety, int x, int y) {
         super(weight);
         this.maxSatiety = maxSatiety;
         this.minSatiety = maxSatiety / 2;
         this.speedMovement = speedMovement;
         this.gender = Gender.randomGender();
         this.isAlive = true;
+        this.x = x;
+        this.y = y;
     }
 
     @Override
@@ -46,6 +48,18 @@ public abstract class Animal extends Inhabitant implements IEatable {
             case DOWN_AND_LEFT -> {x--; y--;}
             case DOWN_AND_RIGHT -> {x--; y++;}
         }
+    }
+
+    public int getX() {
+        return x;
+    }
+
+    public int getY() {
+        return y;
+    }
+
+    public int getSpeedMovement() {
+        return speedMovement;
     }
 
     @Override
