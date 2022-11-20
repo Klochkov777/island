@@ -15,17 +15,43 @@ import static priv.klochkov.island.constants.Direction.*;
 public class ControllerMove {
 
     public Animal animal;
-    Island island;
+    Island oldIsland;
+    Island newIsland;
 
     public ControllerMove(Animal animal, Island island) {
         this.animal = animal;
-        this.island = island;
+        this.oldIsland = island;
+        newIsland = new Island(oldIsland.getWidthIsland(), oldIsland.getLongIsland());
     }
 
-    public void moveAnimal(){
+
+    private void moveAnimal(Location location, Animal animal){
+        location.inhabitants.remove(animal);
+        int x = location.getX();
+        int y = location.getY();
         for (int i = 0; i < animal.getSpeedMovement(); i++) {
             Direction direction = getRandomRightDirection();
-            animal.move(direction);
+            switch (direction){
+                case UP -> x++;
+                case DOWN -> x--;
+                case LEFT -> y--;
+                case RIGHT -> y++;
+                case UP_AND_RIGHT -> {x++; y++;}
+                case UP_AND_LEFT -> {x++; y--;}
+                case DOWN_AND_LEFT -> {x--; y--;}
+                case DOWN_AND_RIGHT -> {x--; y++;}
+            }
+        }
+        moveAnimalToLocation(x, y, animal);
+    }
+
+    private void moveAnimalToLocation(int finishX, int finishY,Animal animal){
+        List<List<Location>> field = newIsland.field;
+        Location destinationLocation = null;
+        for (List<Location> listLocation: field) {
+            for (Location location : listLocation) {
+                if (finishX == location.getX() && finishY == location.getY()) {destinationLocation.inhabitants.add(animal); return;}
+            }
         }
     }
 
@@ -53,7 +79,7 @@ public class ControllerMove {
     }
 
     private boolean checkConditionMaxDownX(Direction direction){
-        return !((animal.getX() == island.getLongIsland() - 1) &&
+        return !((animal.getX() == oldIsland.getLongIsland() - 1) &&
                 (direction == DOWN || direction == DOWN_AND_RIGHT || direction == DOWN_AND_LEFT));
     }
 
@@ -62,15 +88,15 @@ public class ControllerMove {
     }
 
     private boolean checkConditionMaxRightY(Direction direction){
-        return !(animal.getY() == island.getWidthIsland() - 1) &&
+        return !(animal.getY() == oldIsland.getWidthIsland() - 1) &&
                 (direction == RIGHT || direction == DOWN_AND_RIGHT || direction == UP_AND_RIGHT);
     }
 
     public static void main(String[] args) {
         Island island = new Island(3,3);
-        Wolf wolf1 = new Wolf(0,1);
+        Wolf wolf1 = new Wolf();
         Location location = null;
-        for (List<Location> list : island.getLocations()) {
+        for (List<Location> list : island.getField()) {
             List<Location> list1 = list.stream().filter(location1 -> (location1.getX() == 0 && location1.getY() == 1)).toList();
             location = list1.get(0);
             if (location != null) break;

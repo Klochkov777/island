@@ -19,15 +19,14 @@ public abstract class Animal extends Inhabitant implements IEatable {
     int x;
     int y;
 
-    public Animal(int speedMovement, int weight, float maxSatiety, int x, int y) {
+    public Animal(int speedMovement, int weight, float maxSatiety) {
         super(weight);
         this.maxSatiety = maxSatiety;
         this.minSatiety = maxSatiety / 2;
         this.speedMovement = speedMovement;
         this.gender = Gender.randomGender();
         this.isAlive = true;
-        this.x = x;
-        this.y = y;
+        this.isDesireToMate = true;
     }
 
     @Override

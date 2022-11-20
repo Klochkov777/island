@@ -5,7 +5,7 @@ import java.util.*;
 
 public class Location {
 
-    private List<Inhabitant> inhabitants;
+    public List<Inhabitant> inhabitants;
     private int x;
     private  int y;
 

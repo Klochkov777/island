@@ -7,12 +7,12 @@ import java.util.List;
 public class Island {
     private final int longIsland;
     private final int widthIsland;
-    private List<List<Location>> locations;
+    public List<List<Location>> field;
 
     public Island(int widthIsland, int longIsland){
         this.longIsland = longIsland;
         this.widthIsland = widthIsland;
-        locations = getLocationsIsland(widthIsland, longIsland);
+        field = getLocationsIsland(widthIsland, longIsland);
     }
 
     private List<List<Location>> getLocationsIsland(int widthIsland, int longIsland){
@@ -35,17 +35,17 @@ public class Island {
         return widthIsland;
     }
 
-    public List<List<Location>> getLocations() {
-        return locations;
+    public List<List<Location>> getField() {
+        return field;
     }
-    public void setLocations(List<List<Location>> locations){
-        this.locations = locations;
+    public void setField(List<List<Location>> field){
+        this.field = field;
     }
 
 
     public static void main(String[] args) throws InvocationTargetException, NoSuchMethodException, InstantiationException, IllegalAccessException {
         Island island1 = new Island(3,3);
-        for (List<Location> lo : island1.locations) {
+        for (List<Location> lo : island1.field) {
             for (Location lo1 : lo){
                 System.out.println(lo);
             }

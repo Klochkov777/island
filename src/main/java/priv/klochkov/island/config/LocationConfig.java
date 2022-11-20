@@ -14,7 +14,7 @@ import java.util.Map;
 public class LocationConfig {
 
     public static final List<Class<? extends Inhabitant>> listInhabitant;
-    public static final Map<Class<? extends Inhabitant>, Float> maxQualityInhabitants;
+    public static final Map<Class<? extends Inhabitant>, Integer> maxQualityInhabitants;
 
     static {
         listInhabitant = initializationListInhabitant();
@@ -27,17 +27,17 @@ public class LocationConfig {
         return result;
     }
 
-    private static Map<Class<? extends Inhabitant>, Float> convertProperties(String fileName){
+    private static Map<Class<? extends Inhabitant>, Integer> convertProperties(String fileName){
         Map<String, Float> map = Converter.convertPropertiesToMap(fileName);
-        Map<Class<? extends Inhabitant>, Float> result = new HashMap<>();
+        Map<Class<? extends Inhabitant>, Integer> result = new HashMap<>();
         for (Class<? extends Inhabitant> clazz : listInhabitant) {
-            result.put(clazz, map.get(clazz.getSimpleName()));
+            result.put(clazz, (int) (float) map.get(clazz.getSimpleName()));
         };
         return result;
     }
 
     public static void main(String[] args) {
-        for (Map.Entry<Class<? extends Inhabitant>, Float> entry : maxQualityInhabitants.entrySet()) {
+        for (Map.Entry<Class<? extends Inhabitant>, Integer> entry : maxQualityInhabitants.entrySet()) {
             System.out.println(entry);
         }
     }
