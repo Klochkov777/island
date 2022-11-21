@@ -45,7 +45,7 @@ public class ControllerMove {
         moveAnimalToLocation(x, y, animal);
     }
 
-    private void moveAnimalToLocation(int finishX, int finishY,Animal animal){
+    private void moveAnimalToLocation(int finishX, int finishY, Animal animal){
         List<List<Location>> field = newIsland.field;
         Location destinationLocation = null;
         for (List<Location> listLocation: field) {
@@ -105,7 +105,7 @@ public class ControllerMove {
         list.add(wolf1);
         location.setInhabitants(list);
         ControllerMove controllerMove = new ControllerMove(wolf1, island);
-        controllerMove.moveAnimal();
+//        controllerMove.moveAnimal();
         System.out.println(wolf1.getX() + " " + wolf1.getY());
     }
 }

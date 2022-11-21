@@ -61,6 +61,18 @@ public abstract class Animal extends Inhabitant implements IEatable {
         return speedMovement;
     }
 
+    public float getMaxSatiety() {
+        return maxSatiety;
+    }
+
+    public float getSatiety() {
+        return satiety;
+    }
+
+    public float getMinSatiety() {
+        return minSatiety;
+    }
+
     @Override
     public String toString() {
         return "{" + this.getClass().getSimpleName() +
