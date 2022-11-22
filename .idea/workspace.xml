@@ -5,10 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0039d95b-3814-478f-bb39-4fe01bc23792" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/controller/Controller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/controller/ControllerLocation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/controller/ControllerLocation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/controller/ControllerMove.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/controller/ControllerMove.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/model/animal/Animal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/model/animal/Animal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/config/AnimalConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/config/AnimalConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/controller/ControllerIsland.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/controller/IslandController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/controller/ControllerLocation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/controller/LocationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/controller/ControllerMove.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/model/island/Island.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/model/island/Island.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -171,19 +175,6 @@
     </option>
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/main/java/priv/klochkov/island/controller/ControllerMove.java</url>
-          <line>27</line>
-          <properties class="priv.klochkov.island.controller.ControllerMove" method="moveAnimal">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <pin-to-top-manager>
       <pinned-members>
         <PinnedItemInfo parentTag="priv.klochkov.island.model.island.Island" memberName="widthIsland" />

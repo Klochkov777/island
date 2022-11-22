@@ -9,13 +9,13 @@ public class Island {
     private final int widthIsland;
     public List<List<Location>> field;
 
-    public Island(int widthIsland, int longIsland){
+    public Island(int longIsland, int widthIsland){
         this.longIsland = longIsland;
         this.widthIsland = widthIsland;
-        field = getLocationsIsland(widthIsland, longIsland);
+        field = getLocationsIsland(longIsland, widthIsland);
     }
 
-    private List<List<Location>> getLocationsIsland(int widthIsland, int longIsland){
+    private List<List<Location>> getLocationsIsland(int longIsland, int widthIsland){
         List<List<Location>> result = new ArrayList<>();
         for (int i = 0; i < longIsland; i++) {
             List<Location> locationList = new ArrayList<>();

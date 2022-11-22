@@ -1,5 +1,6 @@
 package priv.klochkov.island.config;
 
+import priv.klochkov.island.model.Inhabitant;
 import priv.klochkov.island.model.animal.Animal;
 import priv.klochkov.island.model.animal.herbivores.*;
 import priv.klochkov.island.model.animal.predators.*;
@@ -12,7 +13,7 @@ import java.util.Map;
 public class AnimalConfig {
 
     public static List<Class<?extends Animal>> classesAnimal;
-    public static Map<Class<? extends Animal>, Map<Class<? extends Animal>, Float>> dataProbability;
+    public static Map<Class<? extends Animal>, Map<Class<? extends Inhabitant>, Float>> dataProbability;
 
     static {
         classesAnimal = initializationClassesAnimal();
@@ -37,8 +38,8 @@ public class AnimalConfig {
                 Snake.class);
     }
 
-    private static Map<Class<? extends Animal>, Map<Class<? extends Animal>, Float>> initializationDataProbability(){
-        Map<Class<? extends Animal>, Map<Class<? extends Animal>, Float>> result = new HashMap<>();
+    private static Map<Class<? extends Animal>, Map<Class<? extends Inhabitant>, Float>> initializationDataProbability(){
+        Map<Class<? extends Animal>, Map<Class<? extends Inhabitant>, Float>> result = new HashMap<>();
         List<String> fileNamesProbability = classesAnimal.stream()
                 .map(clazz -> "animals/probability/" + clazz.getSimpleName().toLowerCase() + ".properties").toList();
         for (int i = 0; i < fileNamesProbability.size(); i++) {
@@ -48,28 +49,28 @@ public class AnimalConfig {
     }
 
 
-    private static Map<Class<? extends Animal>, Float> convertProperties(String fileName){
+    private static Map<Class<? extends Inhabitant>, Float> convertProperties(String fileName){
         Map<String, Float> map = Converter.convertPropertiesToMap(fileName);
         Map<Class<?>, Float> map1 = Converter.convertKeysMapStringToClass(map, classesAnimal);
-        Map<Class<? extends Animal>, Float> result = new HashMap<>();
+        Map<Class<? extends Inhabitant>, Float> result = new HashMap<>();
         for (Map.Entry<Class<?>, Float> entry : map1.entrySet()) {
-            result.put((Class<? extends Animal>) entry.getKey(), entry.getValue());
+            result.put((Class<? extends Inhabitant>) entry.getKey(), entry.getValue());
         };
         return result;
     }
 
-    public static Map<Class<? extends Animal>, Float> getProbabilityForClass(Class<? extends Animal> clazz){
+    public static Map<Class<? extends Inhabitant>, Float> getProbabilityForClass(Class<? extends Inhabitant> clazz){
         return dataProbability.get(clazz);
     }
 
     public static void main(String[] args) {
         classesAnimal.stream().forEach(System.out::println);
         System.out.println();
-        for (Map.Entry<Class<? extends Animal>, Map<Class<? extends Animal>, Float>> entry1: dataProbability.entrySet() ) {
+        for (Map.Entry<Class<? extends Animal>, Map<Class<? extends Inhabitant>, Float>> entry1: dataProbability.entrySet() ) {
             System.out.println();
             System.out.println(entry1.getKey());
-            Map <Class<? extends Animal>, Float> map = entry1.getValue();
-            for (Map.Entry<Class<? extends Animal>, Float> entry2 : map.entrySet()) {
+            Map <Class<? extends Inhabitant>, Float> map = entry1.getValue();
+            for (Map.Entry<Class<? extends Inhabitant>, Float> entry2 : map.entrySet()) {
                 System.out.println(entry2);
             }
         }
