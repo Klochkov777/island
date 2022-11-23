@@ -73,6 +73,18 @@ public abstract class Animal extends Inhabitant implements IEatable {
         return minSatiety;
     }
 
+    public boolean isDesireToMate() {
+        return isDesireToMate;
+    }
+
+    public void setDesireToMate(boolean desireToMate) {
+        isDesireToMate = desireToMate;
+    }
+
+    public Gender getGender() {
+        return gender;
+    }
+
     @Override
     public String toString() {
         return "{" + this.getClass().getSimpleName() +

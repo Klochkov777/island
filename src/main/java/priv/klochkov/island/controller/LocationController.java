@@ -11,10 +11,14 @@ import priv.klochkov.island.model.animal.interfaces.IEatablePlant;
 import priv.klochkov.island.model.animal.predators.Predator;
 import priv.klochkov.island.model.island.Island;
 import priv.klochkov.island.model.island.Location;
+
+import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
 import java.util.*;
 import static priv.klochkov.island.constants.Direction.*;
 import static priv.klochkov.island.constants.Direction.UP_AND_RIGHT;
+import static priv.klochkov.island.constants.Gender.FEMALE;
+import static priv.klochkov.island.constants.Gender.MALE;
 
 public class LocationController {
 
@@ -160,30 +164,41 @@ public class LocationController {
             }
         }
     }
-
-
-    private void removeInhabitant(Location location, Inhabitant inhabitant) {
-        location.inhabitants.remove(inhabitant);
+// I must filter class of Animal
+    public void mateAnimals(Location location) {
+        List<Animal> males = location.inhabitants.stream().
+                filter(inhabitant -> (inhabitant instanceof Animal)).
+                map(inhabitant -> (Animal) inhabitant).
+                filter(animal -> animal.getGender() == MALE).
+                toList();
+        List<Animal> females = location.inhabitants.stream().
+                filter(inhabitant -> (inhabitant instanceof Animal)).
+                map(inhabitant -> (Animal) inhabitant).
+                filter(animal -> animal.getGender() == FEMALE).
+                toList();
+        findCoupleForMating(males, females);
     }
 
-//    public boolean eatAnimal(){
-//        Map<Class<? extends Animal>, Map<Class<? extends Animal>, Float>> dataProbability = AnimalConfig.dataProbability;
-//        Random random = new Random();
-//        List<Animal> animals = location.inhabitants.stream().
-//                filter(inhabitant -> inhabitant instanceof Animal).
-//                map(inhabitant -> (Animal) inhabitant).toList();
-//        for (Animal animal : animals) {
-//            Map<Class<? extends Animal>, Float> probabilityAttack = dataProbability.get(animal);
-//            for (Animal animalBeingAttackedAttack : animals) {
-//                if (animal.getMaxSatiety() <= animal.getSatiety()) {break;}
-//                int probability = random.nextInt();
-//                if (probabilityAttack.get(animalBeingAttackedAttack.getClass()) <= probability) {
-//                    location.inhabitants.remove(animalBeingAttackedAttack);
-//                    animal.eat(animalBeingAttackedAttack);
-//                }
-//            }
-//        }
-//    }
+    private void findCoupleForMating(List<Animal> males, List<Animal> females) {
+        Iterator<Animal> iteratorMale = males.iterator();
+        Iterator<Animal> iteratorFemale = females.iterator();
+        while (iteratorMale.hasNext()){
+            Animal male = iteratorMale.next();
+            if (!male.isDesireToMate()) {continue;}
+            while (iteratorFemale.hasNext())
+        }
+    }
+
+    private void giveBirth(Class<? extends Animal> clazz, Location location) throws NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException {
+        int maxCountChildren = AnimalConfig.maxKids.get(clazz);
+        int countChild = random.nextInt(maxCountChildren);
+        Constructor<? extends Animal> constructor = clazz.getConstructor();
+        for (int i = 0; i < countChild; i++) {
+            Animal animal = constructor.newInstance();
+            animal.setDesireToMate(false);
+            location.inhabitants.add(animal);
+        }
+    }
 
 
 

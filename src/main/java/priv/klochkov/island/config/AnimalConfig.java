@@ -14,10 +14,12 @@ public class AnimalConfig {
 
     public static List<Class<?extends Animal>> classesAnimal;
     public static Map<Class<? extends Animal>, Map<Class<? extends Inhabitant>, Float>> dataProbability;
+    public static Map<Class<? extends Inhabitant>, Integer> maxKids;
 
     static {
         classesAnimal = initializationClassesAnimal();
         dataProbability = initializationDataProbability();
+        maxKids = convertPropertiesKids();
     }
 
     private static List<Class<? extends Animal>> initializationClassesAnimal(){
@@ -59,20 +61,31 @@ public class AnimalConfig {
         return result;
     }
 
-    public static Map<Class<? extends Inhabitant>, Float> getProbabilityForClass(Class<? extends Inhabitant> clazz){
-        return dataProbability.get(clazz);
+
+    private static Map<Class<? extends Inhabitant>, Integer> convertPropertiesKids(){
+        Map<Class<? extends Inhabitant>, Float> map = convertProperties("kids/count.properties");
+        Map<Class<? extends Inhabitant>, Integer> result = new HashMap<>();
+        for (Map.Entry<Class<? extends Inhabitant>, Float> entry : map.entrySet()) {
+            result.put(entry.getKey(), (int) (float) entry.getValue());
+        }
+        return result;
     }
 
+
     public static void main(String[] args) {
-        classesAnimal.stream().forEach(System.out::println);
-        System.out.println();
-        for (Map.Entry<Class<? extends Animal>, Map<Class<? extends Inhabitant>, Float>> entry1: dataProbability.entrySet() ) {
-            System.out.println();
-            System.out.println(entry1.getKey());
-            Map <Class<? extends Inhabitant>, Float> map = entry1.getValue();
-            for (Map.Entry<Class<? extends Inhabitant>, Float> entry2 : map.entrySet()) {
-                System.out.println(entry2);
-            }
+//        classesAnimal.stream().forEach(System.out::println);
+//        System.out.println();
+//        for (Map.Entry<Class<? extends Animal>, Map<Class<? extends Inhabitant>, Float>> entry1: dataProbability.entrySet() ) {
+//            System.out.println();
+//            System.out.println(entry1.getKey());
+//            Map <Class<? extends Inhabitant>, Float> map = entry1.getValue();
+//            for (Map.Entry<Class<? extends Inhabitant>, Float> entry2 : map.entrySet()) {
+//                System.out.println(entry2);
+//            }
+//        }
+        for (Map.Entry<Class<? extends Inhabitant>, Integer> entry : maxKids.entrySet()) {
+            System.out.println(entry.getKey().getSimpleName() + " : " + entry.getValue());
         }
+
     }
 }
