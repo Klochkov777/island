@@ -148,12 +148,14 @@ public class LocationController {
         for (Animal animal : animals) {
             if (!location.inhabitants.contains(animal)){break;}
             Map<Class<? extends Inhabitant>, Float> probabilityAttack = AnimalConfig.dataProbability.get(animal.getClass());
-            for (Inhabitant inhabitantBeingAttacked : location.inhabitants) {
+            Iterator<Inhabitant> iteratorInhabitant = location.inhabitants.iterator();
+            while (iteratorInhabitant.hasNext()) {
                 if (animal.getMaxSatiety() <= animal.getSatiety()) {break;}
+                Inhabitant inhabitantUnderAttack = iteratorInhabitant.next();
                 int probability = random.nextInt(100);
-                if (probabilityAttack.get(inhabitantBeingAttacked.getClass()) <= probability) {
-                    removeInhabitant(location, inhabitantBeingAttacked);
-                    animal.eat(inhabitantBeingAttacked);
+                if (probabilityAttack.get(inhabitantUnderAttack.getClass()) <= probability) {
+                    iteratorInhabitant.remove();
+                    animal.eat(inhabitantUnderAttack);
                 }
             }
         }

@@ -35,6 +35,12 @@ public class IslandController {
         island = locationController.getIslandAfterMove();
     }
 
+    public void eat() {
+        island.field.forEach(locations -> {
+            locations.forEach(locationController::eatInhabitantsOfLocation);
+        });
+    }
+
     public void setIsland(Island island) {
         this.island = island;
     }
