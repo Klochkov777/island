@@ -16,8 +16,7 @@ public abstract class Animal extends Inhabitant implements IEatable {
     protected boolean isFullSatiety;
     protected boolean isDesireToMate;
     protected boolean isAlive;
-    int x;
-    int y;
+
 
     public Animal(int speedMovement, int weight, float maxSatiety) {
         super(weight);
@@ -34,27 +33,6 @@ public abstract class Animal extends Inhabitant implements IEatable {
         if (!isFullSatiety) {return;}
         satiety += inhabitant.getWeight();
         if (satiety >= maxSatiety) {isFullSatiety = true;}
-    }
-
-    public void move(Direction direction){
-        switch (direction){
-            case UP -> x++;
-            case DOWN -> x--;
-            case LEFT -> y--;
-            case RIGHT -> y++;
-            case UP_AND_RIGHT -> {x++; y++;}
-            case UP_AND_LEFT -> {x++; y--;}
-            case DOWN_AND_LEFT -> {x--; y--;}
-            case DOWN_AND_RIGHT -> {x--; y++;}
-        }
-    }
-
-    public int getX() {
-        return x;
-    }
-
-    public int getY() {
-        return y;
     }
 
     public int getSpeedMovement() {

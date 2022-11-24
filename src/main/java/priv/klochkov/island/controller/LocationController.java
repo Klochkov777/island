@@ -3,6 +3,7 @@ package priv.klochkov.island.controller;
 import priv.klochkov.island.Factory.FactoryInhabitant;
 import priv.klochkov.island.config.AnimalConfig;
 import priv.klochkov.island.constants.Direction;
+import priv.klochkov.island.constants.Gender;
 import priv.klochkov.island.model.Inhabitant;
 import priv.klochkov.island.model.animal.Animal;
 import priv.klochkov.island.model.animal.herbivores.Herbivore;
@@ -12,6 +13,7 @@ import priv.klochkov.island.model.animal.predators.Predator;
 import priv.klochkov.island.model.island.Island;
 import priv.klochkov.island.model.island.Location;
 
+import javax.swing.event.ListDataEvent;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
 import java.util.*;
@@ -165,27 +167,39 @@ public class LocationController {
         }
     }
 // I must filter class of Animal
-    public void mateAnimals(Location location) {
-        List<Animal> males = location.inhabitants.stream().
-                filter(inhabitant -> (inhabitant instanceof Animal)).
-                map(inhabitant -> (Animal) inhabitant).
-                filter(animal -> animal.getGender() == MALE).
-                toList();
-        List<Animal> females = location.inhabitants.stream().
-                filter(inhabitant -> (inhabitant instanceof Animal)).
-                map(inhabitant -> (Animal) inhabitant).
-                filter(animal -> animal.getGender() == FEMALE).
-                toList();
-        findCoupleForMating(males, females);
+    public void mateAnimals(Location location) throws InvocationTargetException, NoSuchMethodException, InstantiationException, IllegalAccessException {
+        Map<Class<? extends Animal>, List<Animal>> males = getAnimalsByGender(location, MALE);
+        Map<Class<? extends Animal>, List<Animal>> females = getAnimalsByGender(location, FEMALE);
+        for (Map.Entry<Class<? extends Animal>, List<Animal>> entry : males.entrySet()) {
+            List<Animal> listMales = entry.getValue();
+            List<Animal> listFemales = females.get(entry.getKey());
+            findCoupleForMating(listMales, listFemales, location);
+        }
     }
 
-    private void findCoupleForMating(List<Animal> males, List<Animal> females) {
+    private Map<Class<? extends Animal>, List<Animal>> getAnimalsByGender(Location location, Gender gender) {
+        Map<Class<? extends Animal>, List<Animal>> result = new HashMap<>();
+        for (Class<? extends Animal> clazz : AnimalConfig.classesAnimal) {
+            List<Animal> listMales = location.inhabitants.stream().
+                    filter(inhabitant -> (inhabitant instanceof Animal)).
+                    map(inhabitant -> (Animal) inhabitant).
+                    filter(animal -> animal.getGender() == gender).toList();
+            result.put(clazz, listMales);
+        }
+        return result;
+    }
+
+    private void findCoupleForMating(List<Animal> males, List<Animal> females, Location location) throws InvocationTargetException, NoSuchMethodException, InstantiationException, IllegalAccessException {
         Iterator<Animal> iteratorMale = males.iterator();
         Iterator<Animal> iteratorFemale = females.iterator();
         while (iteratorMale.hasNext()){
             Animal male = iteratorMale.next();
-            if (!male.isDesireToMate()) {continue;}
-            while (iteratorFemale.hasNext())
+            if (females.size() == 0) {return;}
+            while (iteratorFemale.hasNext()){
+                giveBirth(male.getClass(), location);
+                iteratorFemale.next();
+                iteratorFemale.remove();
+            }
         }
     }
 
@@ -195,7 +209,6 @@ public class LocationController {
         Constructor<? extends Animal> constructor = clazz.getConstructor();
         for (int i = 0; i < countChild; i++) {
             Animal animal = constructor.newInstance();
-            animal.setDesireToMate(false);
             location.inhabitants.add(animal);
         }
     }
