@@ -5,16 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0039d95b-3814-478f-bb39-4fe01bc23792" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/config/PlantConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/model/plant/AbstractPlant.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/location/plantStep.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/Factory/FactoryInhabitant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/Factory/FactoryInhabitant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/config/LocationConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/config/LocationConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/controller/IslandController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/controller/IslandController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/controller/LocationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/controller/LocationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/model/animal/herbivores/Duck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/model/animal/herbivores/Duck.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/model/island/Location.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/model/island/Location.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/model/plant/Plant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/model/plant/Plant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/view/ViewIsland.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/view/ViewIsland.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,7 +50,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "/home/vladimir/JavaRushInstitute/island",
+    "last_opened_file_path": "/home/vladimir/JavaRushInstitute/ManagerLift",
     "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
@@ -66,7 +62,7 @@
       <recent name="$PROJECT_DIR$/src/main/resources/animals/probability" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.FactoryInhabitant">
+  <component name="RunManager" selected="Application.App">
     <configuration name="AnimalConfig" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="priv.klochkov.island.config.AnimalConfig" />
       <module name="island" />
@@ -93,19 +89,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ControllerMove" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="priv.klochkov.island.controller.ControllerMove" />
-      <module name="island" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="priv.klochkov.island.controller.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="FactoryInhabitant" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="priv.klochkov.island.Factory.FactoryInhabitant" />
       <module name="island" />
@@ -119,12 +102,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Island" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="priv.klochkov.island.model.island.Island" />
+    <configuration name="LocationConfig" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="priv.klochkov.island.config.LocationConfig" />
       <module name="island" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="priv.klochkov.island.model.island.*" />
+          <option name="PATTERN" value="priv.klochkov.island.config.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ViewIsland" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="priv.klochkov.island.view.ViewIsland" />
+      <module name="island" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="priv.klochkov.island.view.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -134,11 +130,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.App" />
+        <item itemvalue="Application.ViewIsland" />
+        <item itemvalue="Application.LocationConfig" />
         <item itemvalue="Application.FactoryInhabitant" />
         <item itemvalue="Application.AnimalConfig" />
-        <item itemvalue="Application.ControllerMove" />
-        <item itemvalue="Application.App" />
-        <item itemvalue="Application.Island" />
       </list>
     </recent_temporary>
   </component>

@@ -40,5 +40,11 @@ public class LocationConfig {
         for (Map.Entry<Class<? extends Inhabitant>, Integer> entry : maxQualityInhabitants.entrySet()) {
             System.out.println(entry);
         }
+
+        System.out.println();
+        System.out.println();
+
+        System.out.println(classesInhabitant);
     }
+
 }

@@ -1,5 +1,6 @@
 package priv.klochkov.island.model.island;
 
+import priv.klochkov.island.config.LocationConfig;
 import priv.klochkov.island.model.Inhabitant;
 import priv.klochkov.island.model.animal.Animal;
 import priv.klochkov.island.model.plant.Plant;
@@ -22,6 +23,16 @@ public class Location {
 
     public List<Inhabitant> getInhabitants() {
         return inhabitants;
+    }
+
+    public Map<Class<? extends Inhabitant>, Long> getQualityInhabitant() {
+        Map<Class<? extends Inhabitant>, Long> result = new HashMap<>();
+        LocationConfig.classesInhabitant.forEach(clazz -> this.inhabitants.stream().filter(inhabitant -> clazz.equals(inhabitant.getClass())).count());
+        for (Class<? extends Inhabitant> clazz : LocationConfig.classesInhabitant) {
+            long qualityInhabitant = this.inhabitants.stream().filter(inhabitant -> clazz.equals(inhabitant.getClass())).count();
+            result.put(clazz, qualityInhabitant);
+        }
+        return result;
     }
 
     public void setInhabitants(List<Inhabitant> inhabitants) {
