@@ -41,6 +41,26 @@ public class IslandController {
         });
     }
 
+    public void mate() {
+        island.field.forEach(locations -> {
+            locations.forEach(location -> {
+                try {
+                    locationController.mateAnimals(location);
+                } catch (InvocationTargetException | NoSuchMethodException | InstantiationException | IllegalAccessException e) {
+                    throw new RuntimeException(e);
+                }
+            });
+        });
+    }
+
+    public void growPlant() throws InvocationTargetException, NoSuchMethodException, InstantiationException, IllegalAccessException {
+        for (List<Location> list : island.field) {
+            for (Location location : list) {
+                locationController.growPlant(location);
+            }
+        }
+    }
+
     public void setIsland(Island island) {
         this.island = island;
     }

@@ -2,6 +2,7 @@ package priv.klochkov.island.controller;
 
 import priv.klochkov.island.Factory.FactoryInhabitant;
 import priv.klochkov.island.config.AnimalConfig;
+import priv.klochkov.island.config.PlantConfig;
 import priv.klochkov.island.constants.Direction;
 import priv.klochkov.island.constants.Gender;
 import priv.klochkov.island.model.Inhabitant;
@@ -12,6 +13,7 @@ import priv.klochkov.island.model.animal.interfaces.IEatablePlant;
 import priv.klochkov.island.model.animal.predators.Predator;
 import priv.klochkov.island.model.island.Island;
 import priv.klochkov.island.model.island.Location;
+import priv.klochkov.island.model.plant.AbstractPlant;
 
 import javax.swing.event.ListDataEvent;
 import java.lang.reflect.Constructor;
@@ -213,7 +215,13 @@ public class LocationController {
         }
     }
 
-
+    public void growPlant(Location location) throws InvocationTargetException, NoSuchMethodException, InstantiationException, IllegalAccessException {
+        for (Class<? extends AbstractPlant> clazz : PlantConfig.classesPlants) {
+            int qualityPlant = PlantConfig.qualityPlantEveryStep.get(clazz);
+            List<AbstractPlant> plants = FactoryInhabitant.createPlants(qualityPlant, clazz);
+            location.inhabitants.addAll(plants);
+        }
+    }
 
     public void setNewIslandForMove(Island island) {
         this.newIslandForMove = island;

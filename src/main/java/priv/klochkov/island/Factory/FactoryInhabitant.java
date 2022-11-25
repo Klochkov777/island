@@ -2,7 +2,10 @@ package priv.klochkov.island.Factory;
 
 import priv.klochkov.island.config.LocationConfig;
 import priv.klochkov.island.model.Inhabitant;
+import priv.klochkov.island.model.plant.AbstractPlant;
+import priv.klochkov.island.model.plant.Plant;
 
+import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.List;
@@ -25,5 +28,20 @@ public class FactoryInhabitant {
             }
         }
         return inhabitants;
+    }
+
+    public static List<AbstractPlant> createPlants(int qualityPlant, Class<? extends AbstractPlant> clazz) throws NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException {
+        List<AbstractPlant> result = new ArrayList<>();
+        Constructor<? extends AbstractPlant> constructorPlant = clazz.getConstructor();
+        for (int i = 0; i < qualityPlant; i++) {
+            AbstractPlant plant = constructorPlant.newInstance();
+            result.add(plant);
+        }
+        return result;
+    }
+
+    public static void main(String[] args) throws InvocationTargetException, NoSuchMethodException, InstantiationException, IllegalAccessException {
+        Plant plant = new Plant();
+        System.out.println(createPlants(5, new Plant().getClass()));
     }
 }
