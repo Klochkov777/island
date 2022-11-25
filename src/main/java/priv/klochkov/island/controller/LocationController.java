@@ -15,7 +15,7 @@ import priv.klochkov.island.model.island.Island;
 import priv.klochkov.island.model.island.Location;
 import priv.klochkov.island.model.plant.AbstractPlant;
 
-import javax.swing.event.ListDataEvent;
+
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
 import java.util.*;
@@ -27,11 +27,9 @@ import static priv.klochkov.island.constants.Gender.MALE;
 public class LocationController {
 
     Island newIslandForMove;
-    Random random = new Random();
+    private Location location;
+    private Random random = new Random();
 
-    public LocationController() {
-
-    }
 
     public void settleInhabitantsToLocation(Location location) throws InvocationTargetException, NoSuchMethodException, InstantiationException, IllegalAccessException {
         location.setInhabitants(FactoryInhabitant.createInhabitants());
@@ -41,12 +39,12 @@ public class LocationController {
         return newIslandForMove;
     }
 
-    public void moveAllAnimalsOfLocation(Location location){
+    public void moveAllAnimalsOfLocation(){
         location.inhabitants.stream().filter(inhabitant -> inhabitant instanceof Animal).forEach(inhabitant -> {
-            Animal animal1 = (Animal) inhabitant; moveAnimal(location, animal1);});
+            Animal animal1 = (Animal) inhabitant; moveAnimal(animal1);});
     }
 
-    private void moveAnimal(Location location, Animal animal){
+    private void moveAnimal(Animal animal){
         location.inhabitants.remove(animal);
         int x = location.getX();
         int y = location.getY();
@@ -113,46 +111,46 @@ public class LocationController {
     }
 
 
-    public void eatInhabitantsOfLocation(Location location) {
-        eatByPredatorsOfLocation(location);
-        eatByOmnivoresOfLocation(location);
-        eatByHerbivoreOfLocation(location);
+    public void eatInhabitantsOfLocation() {
+        eatByPredatorsOfLocation();
+        eatByOmnivoresOfLocation();
+        eatByHerbivoreOfLocation();
     }
 
-    private void eatByPredatorsOfLocation(Location location) {
-        List<Predator> predators = getPredators(location);
-        eatByAnimals(predators, location);
+    private void eatByPredatorsOfLocation() {
+        List<Predator> predators = getPredators();
+        eatByAnimals(predators);
     }
 
-    private void eatByOmnivoresOfLocation(Location location) {
-        List<Animal> omnivores = getOmnivores(location);
-        eatByAnimals(omnivores, location);
+    private void eatByOmnivoresOfLocation() {
+        List<Animal> omnivores = getOmnivores();
+        eatByAnimals(omnivores);
     }
 
-    private void eatByHerbivoreOfLocation(Location location) {
-        List<Herbivore> herbivores = getHerbivores(location);
-        eatByAnimals(herbivores, location);
+    private void eatByHerbivoreOfLocation() {
+        List<Herbivore> herbivores = getHerbivores();
+        eatByAnimals(herbivores);
     }
 
-    private List<Predator> getPredators(Location location) {
+    private List<Predator> getPredators() {
        return location.inhabitants.stream().
                 filter(inhabitant -> inhabitant instanceof Predator).
                 map(inhabitant -> (Predator) inhabitant).toList();
     }
 
-    private List<Animal> getOmnivores(Location location) {
+    private List<Animal> getOmnivores() {
         return location.inhabitants.stream().
                 filter(inhabitant -> ((inhabitant instanceof IEatableAnimal) && (inhabitant instanceof IEatablePlant))).
                 map(inhabitant -> (Animal) inhabitant).toList();
     }
 
-    private List<Herbivore> getHerbivores(Location location) {
+    private List<Herbivore> getHerbivores() {
         return location.inhabitants.stream().
                 filter(inhabitant -> (!(inhabitant instanceof IEatableAnimal) && (inhabitant instanceof IEatablePlant))).
                 map(inhabitant -> (Herbivore) inhabitant).toList();
     }
 
-    private void eatByAnimals(List<? extends Animal> animals, Location location) {
+    private void eatByAnimals(List<? extends Animal> animals) {
         for (Animal animal : animals) {
             if (!location.inhabitants.contains(animal)){break;}
             Map<Class<? extends Inhabitant>, Float> probabilityAttack = AnimalConfig.dataProbability.get(animal.getClass());
@@ -225,5 +223,9 @@ public class LocationController {
 
     public void setNewIslandForMove(Island island) {
         this.newIslandForMove = island;
+    }
+
+    public void setLocation(Location location) {
+        this.location = location;
     }
 }

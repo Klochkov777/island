@@ -5,11 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0039d95b-3814-478f-bb39-4fe01bc23792" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/tasks/TaskAnimal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/tasks/TaskPlant.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/tasks/TaskView.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/config/LocationConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/config/LocationConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/model/animal/herbivores/Duck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/model/animal/herbivores/Duck.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/model/island/Location.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/model/island/Location.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/controller/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/controller/IslandController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/controller/IslandController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/controller/LocationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/controller/LocationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/model/animal/Animal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/model/animal/Animal.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/view/ViewIsland.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/view/ViewIsland.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -179,6 +183,11 @@
           <url>file://$PROJECT_DIR$/src/main/java/priv/klochkov/island/model/animal/Animal.java</url>
           <line>23</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/priv/klochkov/island/controller/Controller.java</url>
+          <line>26</line>
+          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

@@ -14,7 +14,7 @@ public abstract class Animal extends Inhabitant implements IEatable {
     protected final Gender gender;
     protected float satiety;
     protected boolean isFullSatiety;
-    protected boolean isDesireToMate;
+
     protected boolean isAlive;
 
 
@@ -25,7 +25,7 @@ public abstract class Animal extends Inhabitant implements IEatable {
         this.speedMovement = speedMovement;
         this.gender = Gender.randomGender();
         this.isAlive = true;
-        this.isDesireToMate = true;
+
     }
 
     @Override
@@ -49,14 +49,6 @@ public abstract class Animal extends Inhabitant implements IEatable {
 
     public float getMinSatiety() {
         return minSatiety;
-    }
-
-    public boolean isDesireToMate() {
-        return isDesireToMate;
-    }
-
-    public void setDesireToMate(boolean desireToMate) {
-        isDesireToMate = desireToMate;
     }
 
     public Gender getGender() {

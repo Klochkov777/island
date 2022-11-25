@@ -37,6 +37,10 @@ public class ViewIsland {
         }
     }
 
+    public void separate() {
+        System.out.println("Finish\n\n\n\n\n");
+    }
+
 
     private String dataOneClass(String simpleNameClass, Long qualityInhabitant) {
         return String.format("%-15s %-15s", simpleNameClass, qualityInhabitant);

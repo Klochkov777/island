@@ -30,14 +30,14 @@ public class IslandController {
     public void moveAllAnimals(){
         locationController.setNewIslandForMove(new Island(island.getLongIsland(), island.getWidthIsland()));
         island.field.forEach(locations -> {
-            locations.forEach(locationController::moveAllAnimalsOfLocation);
+            locations.forEach(location -> {locationController.setLocation(location); locationController.moveAllAnimalsOfLocation();});
         });
         island = locationController.getIslandAfterMove();
     }
 
     public void eat() {
         island.field.forEach(locations -> {
-            locations.forEach(locationController::eatInhabitantsOfLocation);
+            locations.forEach(location -> {locationController.setLocation(location); locationController.eatInhabitantsOfLocation();});
         });
     }
 
