@@ -5,27 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0039d95b-3814-478f-bb39-4fe01bc23792" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/config/InhabitantConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/Factory/FactoryInhabitant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/Factory/FactoryInhabitant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/config/AnimalConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/config/AnimalConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/config/LocationConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/config/LocationConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/config/PlantConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/config/PlantConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/controller/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/controller/IslandController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/controller/IslandController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/config/AnimalConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/config/InhabitantConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/config/InhabitantConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/config/LocationConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/config/PlantConfig.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/controller/LocationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/controller/LocationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/model/animal/Animal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/model/animal/Animal.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/model/island/Location.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/model/island/Location.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/tasks/TaskAnimal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/tasks/AnimalTask.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/tasks/TaskView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/tasks/TaskView.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/utils/Converter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/utils/Converter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/tasks/AnimalTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/tasks/AnimalTask.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/view/ViewIsland.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/view/ViewIsland.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/animals/probability/bear.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/animals/probability/bear.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/animals/probability/fox.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/animals/probability/fox.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/animals/probability/snake.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/animals/probability/snake.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/animals/probability/wolf.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/animals/probability/wolf.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/kids/count.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/kids/count.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/location/numberAnimal.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/location/numberAnimal.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -45,7 +34,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="feature" />
+        <entry key="$PROJECT_DIR$" value="featureRev" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -78,7 +67,7 @@
       <recent name="$PROJECT_DIR$/src/main/resources/animals/probability" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.LocationController">
+  <component name="RunManager" selected="Application.App">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="priv.klochkov.island.App" />
       <module name="island" />
@@ -146,8 +135,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.LocationController" />
         <item itemvalue="Application.App" />
+        <item itemvalue="Application.LocationController" />
         <item itemvalue="Application.ViewIsland" />
         <item itemvalue="Application.LocationConfig" />
         <item itemvalue="Application.FactoryInhabitant" />
@@ -176,7 +165,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="feature" />
+                        <option value="featureRev" />
                       </list>
                     </value>
                   </entry>
@@ -189,39 +178,6 @@
     </option>
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/priv/klochkov/island/controller/Controller.java</url>
-          <line>24</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/priv/klochkov/island/tasks/AnimalTask.java</url>
-          <line>16</line>
-          <option name="timeStamp" value="33" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/priv/klochkov/island/controller/LocationController.java</url>
-          <line>195</line>
-          <option name="timeStamp" value="39" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/priv/klochkov/island/controller/LocationController.java</url>
-          <line>278</line>
-          <option name="timeStamp" value="40" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/priv/klochkov/island/controller/LocationController.java</url>
-          <line>182</line>
-          <option name="timeStamp" value="43" />
-        </line-breakpoint>
-        <breakpoint enabled="true" type="java-exception">
-          <properties class="java.lang.ExceptionInInitializerError" package="java.lang" />
-          <option name="timeStamp" value="44" />
-        </breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <pin-to-top-manager>
       <pinned-members>
         <PinnedItemInfo parentTag="priv.klochkov.island.model.island.Island" memberName="widthIsland" />

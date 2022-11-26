@@ -1,9 +1,7 @@
 package priv.klochkov.island.controller;
 
 import priv.klochkov.island.Factory.FactoryInhabitant;
-import priv.klochkov.island.config.AnimalConfig;
 import priv.klochkov.island.config.InhabitantConfig;
-import priv.klochkov.island.config.PlantConfig;
 import priv.klochkov.island.constants.Direction;
 import priv.klochkov.island.constants.Gender;
 import priv.klochkov.island.model.Inhabitant;
@@ -65,22 +63,10 @@ public class LocationController {
                 case DOWN -> x--;
                 case LEFT -> y--;
                 case RIGHT -> y++;
-                case UP_AND_RIGHT -> {
-                    x++;
-                    y++;
-                }
-                case UP_AND_LEFT -> {
-                    x++;
-                    y--;
-                }
-                case DOWN_AND_LEFT -> {
-                    x--;
-                    y--;
-                }
-                case DOWN_AND_RIGHT -> {
-                    x--;
-                    y++;
-                }
+                case UP_AND_RIGHT -> {x++; y++;}
+                case UP_AND_LEFT -> {x++; y--;}
+                case DOWN_AND_LEFT -> {x--; y--;}
+                case DOWN_AND_RIGHT -> {x--; y++;}
             }
         }
         addAnimalToLocation(x, y, animal);
@@ -179,7 +165,7 @@ public class LocationController {
         Iterator<? extends Animal> iteratorAnimal = animals.iterator();
         while (iteratorAnimal.hasNext()) {
             Animal animal = iteratorAnimal.next();
-            if (!location.inhabitants.contains(animal)){break;}         //уже само было съедено
+            if (!location.inhabitants.contains(animal)){continue;}         //уже само было съедено
             Map<Class<? extends Inhabitant>, Float> probabilityAttack = InhabitantConfig.dataProbability.get(animal.getClass());
             huntAnimal(animal, probabilityAttack, location);
         }
@@ -188,13 +174,9 @@ public class LocationController {
     private void huntAnimal(Animal animal, Map<Class<? extends Inhabitant>, Float> probabilityAttack, Location location) {
         Iterator<Inhabitant> iteratorInhabitant = location.inhabitants.iterator();
         while (iteratorInhabitant.hasNext()) {
-            if (animal.isFullSatiety()) {
-                return;
-            }
+            if (animal.isFullSatiety()) {return;}
             Inhabitant inhabitantUnderAttack = iteratorInhabitant.next();
-            if (animal.getClass().equals(inhabitantUnderAttack.getClass())){
-                continue;
-            }
+            if (animal.getClass().equals(inhabitantUnderAttack.getClass())){continue;}
             int probability = random.nextInt(100);
             float needProbability = probabilityAttack.get(inhabitantUnderAttack.getClass());
             if (probability <= needProbability) {

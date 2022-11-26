@@ -75,10 +75,6 @@ public class InhabitantConfig {
     private static Map<Class<? extends Inhabitant>, Float> convertProperties(String fileName){
         Map<String, Float> map = Converter.convertPropertiesToMap(fileName);
         Map<Class<? extends Inhabitant>, Float> map1 = Converter.convertKeysMapStringToClass1(map, classesInhabitant);
-//        Map<Class<? extends Inhabitant>, Float> result = new HashMap<>();
-//        for (Map.Entry<Class<?>, Float> entry : map1.entrySet()) {
-//            result.put((Class<? extends Inhabitant>) entry.getKey(), entry.getValue());
-//        };
         return map1;
     }
 

@@ -1,7 +1,6 @@
 package priv.klochkov.island.model.island;
 
 import priv.klochkov.island.config.InhabitantConfig;
-import priv.klochkov.island.config.LocationConfig;
 import priv.klochkov.island.model.Inhabitant;
 import priv.klochkov.island.model.animal.Animal;
 import priv.klochkov.island.model.plant.Plant;

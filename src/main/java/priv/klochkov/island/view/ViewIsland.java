@@ -1,15 +1,8 @@
 package priv.klochkov.island.view;
 
 import priv.klochkov.island.config.InhabitantConfig;
-import priv.klochkov.island.config.LocationConfig;
 import priv.klochkov.island.controller.IslandController;
 import priv.klochkov.island.model.Inhabitant;
-import priv.klochkov.island.model.animal.Animal;
-import priv.klochkov.island.model.animal.herbivores.Buffalo;
-import priv.klochkov.island.model.animal.herbivores.Caterpillar;
-import priv.klochkov.island.model.animal.herbivores.Duck;
-import priv.klochkov.island.model.animal.herbivores.Goat;
-import priv.klochkov.island.model.animal.predators.Wolf;
 import priv.klochkov.island.model.island.Island;
 import priv.klochkov.island.model.island.Location;
 
