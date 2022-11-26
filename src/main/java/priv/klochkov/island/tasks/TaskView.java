@@ -1,18 +1,24 @@
 package priv.klochkov.island.tasks;
 
-import priv.klochkov.island.model.island.Island;
-import priv.klochkov.island.view.ViewIsland;
+import priv.klochkov.island.controller.IslandController;
 
 public class TaskView implements Runnable {
-    ViewIsland viewIsland;
+    //ViewIsland viewIsland;
+    IslandController islandController;
 
-    public TaskView(Island island) {
-        this.viewIsland = new ViewIsland(island);
+//    public TaskView(Island island) {
+//        this.viewIsland = new ViewIsland(island);
+//    }
+
+
+    public TaskView(IslandController islandController) {
+        this.islandController = islandController;
     }
 
     @Override
     public void run() {
-            viewIsland.printIsland();
-            viewIsland.separate();
+//            viewIsland.printIsland();
+//            viewIsland.separate();
+        islandController.printIsland();
     }
 }

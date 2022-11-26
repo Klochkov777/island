@@ -11,7 +11,7 @@ public class App
 {
     public static void main( String[] args )
     {
-        Controller controller = new Controller(3,3);
+        Controller controller = new Controller(1,2);
         controller.start();
     }
 }

@@ -1,5 +1,6 @@
 package priv.klochkov.island.view;
 
+import priv.klochkov.island.config.InhabitantConfig;
 import priv.klochkov.island.config.LocationConfig;
 import priv.klochkov.island.controller.IslandController;
 import priv.klochkov.island.model.Inhabitant;
@@ -25,7 +26,7 @@ public class ViewIsland {
     public void printIsland() {
         for (int i = 0; i < island.field.size(); i++) {
             List<Location> locations = island.field.get(i);
-            for (Class<? extends Inhabitant> clazz : LocationConfig.classesInhabitant) {
+            for (Class<? extends Inhabitant> clazz : InhabitantConfig.classesInhabitant) {
                 for (Location location : locations) {
                     Map<Class<? extends Inhabitant>, Long> map = location.getQualityInhabitant();
                     String str = dataOneClass(clazz.getSimpleName(), map.get(clazz));

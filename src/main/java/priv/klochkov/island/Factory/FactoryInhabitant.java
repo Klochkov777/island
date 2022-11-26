@@ -1,5 +1,6 @@
 package priv.klochkov.island.Factory;
 
+import priv.klochkov.island.config.InhabitantConfig;
 import priv.klochkov.island.config.LocationConfig;
 import priv.klochkov.island.model.Inhabitant;
 import priv.klochkov.island.model.plant.AbstractPlant;
@@ -16,7 +17,7 @@ public class FactoryInhabitant {
     public static List<Inhabitant> createInhabitants ()
             throws NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException {
         List<Inhabitant> inhabitants = new ArrayList<>();
-        Map<Class<? extends Inhabitant>, Integer> maxQualityInhabitants = LocationConfig.maxQualityInhabitants;
+        Map<Class<? extends Inhabitant>, Integer> maxQualityInhabitants = InhabitantConfig.maxQualityInhabitants;
         Random random = new Random();
         for (Map.Entry<Class<? extends Inhabitant>, Integer> entry : maxQualityInhabitants.entrySet()) {
             Class<? extends Inhabitant> clazz = entry.getKey();

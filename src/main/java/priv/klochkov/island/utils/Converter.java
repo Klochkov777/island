@@ -30,19 +30,16 @@ public class Converter {
         return result;
     }
 
-    public static List<Class<?>> getChildClasses (Class<?> superClass, String packageForFounding) {
-        Reflections reflections = new Reflections(packageForFounding, new SubTypesScanner());
-        List<Class<?>> subTypes = new ArrayList<>();
-        for (String className : reflections.getStore().get(SubTypesScanner.class.getSimpleName()).values()) {
-            try {
-                Class<?> subType = Class.forName(className);
-                if (superClass.isAssignableFrom(subType)) {
-                    subTypes.add(subType);
-                }
-            } catch (ClassNotFoundException e) {
-                throw new RuntimeException("Этого не может быть:)", e);
+    public static Map<Class<? extends Inhabitant>, Float> convertKeysMapStringToClass1(Map<String, Float> map,
+                                                                   List<Class<? extends Inhabitant>> listClasses){
+        Map<Class<? extends Inhabitant>, Float> result = new HashMap<>();
+        for (Class<? extends Inhabitant> clazz : listClasses) {
+            if (map.containsKey(clazz.getSimpleName())) {
+                result.put(clazz, map.get(clazz.getSimpleName()));
             }
         }
-        return subTypes;
+        return result;
     }
+
+
 }

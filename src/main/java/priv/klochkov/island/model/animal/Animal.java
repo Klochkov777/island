@@ -30,7 +30,7 @@ public abstract class Animal extends Inhabitant implements IEatable {
 
     @Override
     public void eat(Inhabitant inhabitant) {
-        if (!isFullSatiety) {return;}
+        if (isFullSatiety) {return;}
         satiety += inhabitant.getWeight();
         if (satiety >= maxSatiety) {isFullSatiety = true;}
     }
@@ -53,6 +53,10 @@ public abstract class Animal extends Inhabitant implements IEatable {
 
     public Gender getGender() {
         return gender;
+    }
+
+    public boolean isFullSatiety() {
+        return isFullSatiety;
     }
 
     @Override
