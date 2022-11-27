@@ -24,7 +24,9 @@ import priv.klochkov.island.model.plant.Plant;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
 import java.util.*;
+import java.util.stream.Collectors;
 
+import static java.util.stream.Collectors.toList;
 import static priv.klochkov.island.constants.Direction.*;
 import static priv.klochkov.island.constants.Direction.UP_AND_RIGHT;
 import static priv.klochkov.island.constants.Gender.FEMALE;
@@ -46,10 +48,13 @@ public class LocationController {
     }
 
     public void moveAllAnimalsOfLocation(Location location) {
-        location.inhabitants.stream().filter(inhabitant -> inhabitant instanceof Animal).forEach(inhabitant -> {
-            Animal animal1 = (Animal) inhabitant;
-            moveAnimal(animal1, location);
-        });
+        List<Animal> animals = location.inhabitants.stream()
+                .filter(inhabitant -> inhabitant instanceof Animal)
+                .map(inhabitant -> (Animal) inhabitant).toList();
+        animals.forEach(animal -> {moveAnimal(animal, location);});
+
+
+        //moveAnimal(animal1, location);
     }
 
     private void moveAnimal(Animal animal, Location location) {
@@ -242,7 +247,9 @@ public class LocationController {
         for (Class<? extends AbstractPlant> clazz : InhabitantConfig.classesPlants) {
             int qualityPlant = InhabitantConfig.qualityPlantEveryStep.get(clazz);
             List<AbstractPlant> plants = FactoryInhabitant.createPlants(qualityPlant, clazz);
-            location.inhabitants.addAll(plants);
+            synchronized (location.inhabitants) {
+                location.inhabitants.addAll(plants);
+            }
         }
     }
 

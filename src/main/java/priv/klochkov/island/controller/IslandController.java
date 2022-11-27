@@ -33,7 +33,7 @@ public class IslandController {
         island.field.forEach(locations -> {
             locations.forEach(location -> {locationController.moveAllAnimalsOfLocation(location);});
         });
-        island = locationController.getIslandAfterMove();
+        island.field = locationController.getIslandAfterMove().field;
     }
 
     public void eat() {

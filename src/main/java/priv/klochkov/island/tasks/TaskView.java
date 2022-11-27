@@ -17,8 +17,6 @@ public class TaskView implements Runnable {
 
     @Override
     public void run() {
-//            viewIsland.printIsland();
-//            viewIsland.separate();
         islandController.printIsland();
     }
 }
