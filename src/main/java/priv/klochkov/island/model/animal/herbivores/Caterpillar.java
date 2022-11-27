@@ -2,7 +2,7 @@ package priv.klochkov.island.model.animal.herbivores;
 
 public class Caterpillar extends Herbivore {
     public Caterpillar() {
-        super(3, 30, 8);
+        super(0, 0.01, 0);
     }
     //gussennica
 }

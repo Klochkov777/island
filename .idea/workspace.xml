@@ -9,8 +9,14 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/controller/Controller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/controller/IslandController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/controller/IslandController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/controller/LocationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/controller/LocationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/tasks/AnimalTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/tasks/AnimalTask.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/tasks/TaskView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/tasks/TaskView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/model/animal/herbivores/Boar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/model/animal/herbivores/Boar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/model/animal/herbivores/Buffalo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/model/animal/herbivores/Buffalo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/model/animal/herbivores/Caterpillar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/model/animal/herbivores/Caterpillar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/model/animal/herbivores/Deer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/model/animal/herbivores/Deer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/model/animal/herbivores/Duck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/model/animal/herbivores/Duck.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/model/animal/herbivores/Goat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/model/animal/herbivores/Goat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/model/animal/herbivores/Hare.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/model/animal/herbivores/Hare.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/model/animal/herbivores/Herbivore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/model/animal/herbivores/Herbivore.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -206,9 +212,24 @@
           <option name="timeStamp" value="53" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/priv/klochkov/island/controller/Controller.java</url>
-          <line>37</line>
-          <option name="timeStamp" value="54" />
+          <url>file://$PROJECT_DIR$/src/main/java/priv/klochkov/island/controller/IslandController.java</url>
+          <line>99</line>
+          <option name="timeStamp" value="56" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/priv/klochkov/island/controller/IslandController.java</url>
+          <line>89</line>
+          <option name="timeStamp" value="57" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/priv/klochkov/island/controller/IslandController.java</url>
+          <line>116</line>
+          <option name="timeStamp" value="60" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/priv/klochkov/island/controller/IslandController.java</url>
+          <line>127</line>
+          <option name="timeStamp" value="61" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

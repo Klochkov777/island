@@ -36,7 +36,8 @@ public class Controller {
         System.out.println("next island");
         while (true){
         controller.islandController.moveAllAnimals();
-            viewIsland.printIsland();
+        new ViewIsland(controller.island).printIsland();
+            //viewIsland.printIsland();
             System.out.println("next island");
         }
     }

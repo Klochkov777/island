@@ -261,6 +261,26 @@ public class LocationController {
         this.location = location;
     }
 
+    public void removeInhabitant(Location location, Inhabitant inhabitant) {
+        location.inhabitants.remove(inhabitant);
+    }
+
+    public void addInhabitant(Location location, Inhabitant inhabitant) {
+        location.inhabitants.add(inhabitant);
+    }
+
+    public List<Animal> getAnimalsOfLocation(Location location) {
+        return location.inhabitants.stream()
+                .filter(inhabitant -> inhabitant instanceof Animal)
+                .map(inhabitant -> (Animal) inhabitant).toList();
+    }
+
+    public List<AbstractPlant> getPlants(Location location) {
+        return location.inhabitants.stream()
+                .filter(inhabitant -> inhabitant instanceof AbstractPlant)
+                .map(inhabitant -> (AbstractPlant) inhabitant).toList();
+    }
+
     public static void main(String[] args) {
         Location location1 = new Location(0,0);
         location1.inhabitants.addAll(List.of(new Wolf(), new Wolf(), new Goat(), new Fox(), new Boar(), new Plant(), new Plant(), new Mouse(), new Mouse(), new Mouse()));

@@ -18,7 +18,7 @@ public abstract class Animal extends Inhabitant implements IEatable {
     protected boolean isAlive;
 
 
-    public Animal(int speedMovement, int weight, float maxSatiety) {
+    public Animal(int speedMovement, float weight, float maxSatiety) {
         super(weight);
         this.maxSatiety = maxSatiety;
         this.minSatiety = maxSatiety / 2;
