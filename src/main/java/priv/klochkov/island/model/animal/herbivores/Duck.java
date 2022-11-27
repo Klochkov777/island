@@ -4,6 +4,6 @@ import priv.klochkov.island.model.animal.interfaces.IEatableAnimal;
 
 public class Duck extends Herbivore implements IEatableAnimal {
     public Duck() {
-        super(4, 1, 0.15);
+        super(4, 1f, 0.15f);
     }
 }
