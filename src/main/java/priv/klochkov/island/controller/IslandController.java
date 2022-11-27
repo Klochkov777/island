@@ -88,8 +88,11 @@ public class IslandController {
         for (List<Location> listLocations : island.field) {
             for (Location oldLocation : listLocations) {
                 List<Animal> animals = locationController.getAnimalsOfLocation(oldLocation);
+                List<Animal> animalsNotMoveAble = animals.stream().filter(animal -> animal.getSpeedMovement() == 0).toList();
+                List<Animal> animalsMoveAble = animals.stream().filter(animal -> animal.getSpeedMovement() > 0).toList();
                 List<AbstractPlant> plants = locationController.getPlants(oldLocation);
-                animals.forEach(animal -> {moveAnimal(animal, oldLocation, newIsland);});
+                animalsMoveAble.forEach(animal -> {moveAnimal(animal, oldLocation, newIsland);});
+                addInhabitantsToIsland(oldLocation.getX(), oldLocation.getY(), animalsNotMoveAble, newIsland);
                 addInhabitantsToIsland(oldLocation.getX(), oldLocation.getY(), plants, newIsland);
             }
         }
@@ -115,14 +118,14 @@ public class IslandController {
         for (int i = 0; i < animal.getSpeedMovement(); i++) {
             Direction direction = getRandomRightDirection(x, y, newIsland);
             switch (direction) {
-                case UP -> x++;
-                case DOWN -> x--;
+                case UP -> x--;
+                case DOWN -> x++;
                 case LEFT -> y--;
                 case RIGHT -> y++;
-                case UP_AND_RIGHT -> {x++; y++;}
-                case UP_AND_LEFT -> {x++; y--;}
-                case DOWN_AND_LEFT -> {x--; y--;}
-                case DOWN_AND_RIGHT -> {x--; y++;}
+                case UP_AND_RIGHT -> {x--; y++;}
+                case UP_AND_LEFT -> {x--; y--;}
+                case DOWN_AND_LEFT -> {x++; y--;}
+                case DOWN_AND_RIGHT -> {x++; y++;}
             }
         }
         addInhabitantToIsland(x, y, animal, newIsland);
@@ -139,14 +142,12 @@ public class IslandController {
     }
 
 
-
-
     private Direction getRandomRightDirection(int x, int y, Island newIsland) {
         Direction direction = null;
         boolean isRightDirection = false;
         while (!isRightDirection) {
             direction = getRandomDirection();
-            isRightDirection = getIsCorrectDirection(direction, x, y, newIsland);
+            isRightDirection = !getIsCorrectDirection(direction, x, y, newIsland);
         }
         return direction;
     }
@@ -161,20 +162,20 @@ public class IslandController {
     }
 
     private boolean checkConditionMaxUpX(Direction direction, int x) {
-        return !(x == 0 && (direction == UP || direction == UP_AND_RIGHT || direction == UP_AND_LEFT));
+        return (x == 0 && (direction == UP || direction == UP_AND_RIGHT || direction == UP_AND_LEFT));
     }
 
     private boolean checkConditionMaxDownX(Direction direction, int x, Island newIsland) {
-        return !((x == newIsland.getLongIsland() - 1) &&
+        return ((x == newIsland.getLongIsland() - 1) &&
                 (direction == DOWN || direction == DOWN_AND_RIGHT || direction == DOWN_AND_LEFT));
     }
 
     private boolean checkConditionMaxLeftY(Direction direction, int y) {
-        return !(y == 0 && (direction == LEFT || direction == DOWN_AND_LEFT || direction == UP_AND_LEFT));
+        return (y == 0 && (direction == LEFT || direction == DOWN_AND_LEFT || direction == UP_AND_LEFT));
     }
 
     private boolean checkConditionMaxRightY(Direction direction, int y, Island newIsland) {
-        return !(y == newIsland.getWidthIsland() - 1) &&
+        return (y == newIsland.getWidthIsland() - 1) &&
                 (direction == RIGHT || direction == DOWN_AND_RIGHT || direction == UP_AND_RIGHT);
     }
 
