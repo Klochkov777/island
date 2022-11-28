@@ -13,7 +13,7 @@ import java.util.Map;
 import java.util.Random;
 
 public class FactoryInhabitant {
-    public static List<Inhabitant> createInhabitants ()
+    public List<Inhabitant> createInhabitants ()
             throws NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException {
         List<Inhabitant> inhabitants = new ArrayList<>();
         Map<Class<? extends Inhabitant>, Integer> maxQualityInhabitants = InhabitantConfig.maxQualityInhabitants;
@@ -23,11 +23,15 @@ public class FactoryInhabitant {
             int maxQuality = entry.getValue();
             int quality = random.nextInt(maxQuality);
             for (int i = 0; i < quality; i++) {
-                Inhabitant inhabitant = clazz.getConstructor().newInstance();
+                Inhabitant inhabitant = createInhabitant(clazz);
                 inhabitants.add(inhabitant);
             }
         }
         return inhabitants;
+    }
+
+    public Inhabitant createInhabitant(Class<? extends Inhabitant> clazz) throws NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException {
+        return clazz.getConstructor().newInstance();
     }
 
     public static List<AbstractPlant> createPlants(int qualityPlant, Class<? extends AbstractPlant> clazz) throws NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException {
@@ -40,8 +44,7 @@ public class FactoryInhabitant {
         return result;
     }
 
-    public static void main(String[] args) throws InvocationTargetException, NoSuchMethodException, InstantiationException, IllegalAccessException {
-        Plant plant = new Plant();
-        System.out.println(createPlants(5, new Plant().getClass()));
+    public AbstractPlant Plant(Class<? extends AbstractPlant> clazz) throws NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException {
+        return clazz.getConstructor().newInstance();
     }
 }

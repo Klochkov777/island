@@ -37,17 +37,9 @@ public class IslandController {
         island.setField(locations);
     }
 
-//    public void moveAllAnimals(){
-//        locationController.setNewIslandForMove(new Island(island.getLongIsland(), island.getWidthIsland()));
-//        island.field.forEach(locations -> {
-//            locations.forEach(location -> {locationController.moveAllAnimalsOfLocation(location);});
-//        });
-//        island.field = locationController.getIslandAfterMove().field;
-//    }
-
     public void eat() {
         island.field.forEach(locations -> {
-            locations.forEach(location -> {locationController.eatInhabitantsOfLocation(location);});
+            locations.forEach(location -> {locationController.setLocation(location); locationController.eatInhabitantsOfLocation();});
         });
     }
 
@@ -59,9 +51,9 @@ public class IslandController {
 
     public void mate() {
         island.field.forEach(locations -> {
-            locations.forEach(location -> {
+            locations.forEach(location -> {locationController.setLocation(location);
                 try {
-                    locationController.mateAnimals(location);
+                    locationController.mateAnimals();
                 } catch (InvocationTargetException | NoSuchMethodException | InstantiationException | IllegalAccessException e) {
                     throw new RuntimeException(e);
                 }
@@ -184,8 +176,4 @@ public class IslandController {
         return (y == newIsland.getWidthIsland() - 1) &&
                 (direction == RIGHT || direction == DOWN_AND_RIGHT || direction == UP_AND_RIGHT);
     }
-
-
-
-
 }
