@@ -5,7 +5,7 @@ import priv.klochkov.island.controller.IslandController;
 import java.lang.reflect.InvocationTargetException;
 
 public class TaskPlant implements Runnable {
-    IslandController islandController;
+    private final IslandController islandController;
 
     public TaskPlant(IslandController islandController) {
         this.islandController = islandController;

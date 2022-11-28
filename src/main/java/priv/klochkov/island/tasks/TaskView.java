@@ -3,13 +3,8 @@ package priv.klochkov.island.tasks;
 import priv.klochkov.island.controller.IslandController;
 
 public class TaskView implements Runnable {
-    //ViewIsland viewIsland;
-    IslandController islandController;
 
-//    public TaskView(Island island) {
-//        this.viewIsland = new ViewIsland(island);
-//    }
-
+    private final IslandController islandController;
 
     public TaskView(IslandController islandController) {
         this.islandController = islandController;

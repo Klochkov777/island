@@ -11,9 +11,9 @@ import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;
 
 public class Controller {
-    Island island;
-    IslandController islandController;
-    ScheduledExecutorService executorService = Executors.newScheduledThreadPool(1);
+    private Island island;
+    private IslandController islandController;
+    private ScheduledExecutorService executorService = Executors.newScheduledThreadPool(1);
 
     public Controller(int lengthIsland, int widthIsland) {
         this.island = new Island(lengthIsland,widthIsland);
@@ -30,14 +30,33 @@ public class Controller {
 
 
     public static void main(String[] args) throws InterruptedException {
+//        Controller controller = new Controller(2,2);
+//        ViewIsland viewIsland = new ViewIsland(controller.island);
+//        viewIsland.printIsland();
+//        System.out.println("next island");
+//        while (true){
+//        controller.islandController.moveAllAnimals();
+//            viewIsland.printIsland();
+//            System.out.println("next island");
+//        }
+
+//        Controller controller = new Controller(2,2);
+//        ViewIsland viewIsland = new ViewIsland(controller.island);
+//        viewIsland.printIsland();
+//        System.out.println("next island");
+//        while (true){
+//        controller.islandController.mate();
+//            viewIsland.printIsland();
+//            System.out.println("next island");
+//        }
+
         Controller controller = new Controller(2,2);
         ViewIsland viewIsland = new ViewIsland(controller.island);
         viewIsland.printIsland();
         System.out.println("next island");
         while (true){
-        controller.islandController.moveAllAnimals();
-        new ViewIsland(controller.island).printIsland();
-            //viewIsland.printIsland();
+            controller.islandController.eat();
+            viewIsland.printIsland();
             System.out.println("next island");
         }
     }

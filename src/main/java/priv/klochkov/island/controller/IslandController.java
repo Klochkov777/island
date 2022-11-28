@@ -51,6 +51,12 @@ public class IslandController {
         });
     }
 
+    public void deathHungryAnimals() {
+        island.field.forEach(locations -> {
+            locations.forEach(location -> {locationController.deathHungryAnimals(location);});
+        });
+    }
+
     public void mate() {
         island.field.forEach(locations -> {
             locations.forEach(location -> {

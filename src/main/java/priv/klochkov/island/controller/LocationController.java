@@ -177,18 +177,28 @@ public class LocationController {
     }
 
     private void huntAnimal(Animal animal, Map<Class<? extends Inhabitant>, Float> probabilityAttack, Location location) {
-        Iterator<Inhabitant> iteratorInhabitant = location.inhabitants.iterator();
-        while (iteratorInhabitant.hasNext()) {
-            if (animal.isFullSatiety()) {return;}
-            Inhabitant inhabitantUnderAttack = iteratorInhabitant.next();
+        List<Inhabitant> inhabitantsDeath = new ArrayList<>();
+        for (Inhabitant inhabitantUnderAttack: location.inhabitants) {
+            if (animal.isFullSatiety()) {break;}
             if (animal.getClass().equals(inhabitantUnderAttack.getClass())){continue;}
             int probability = random.nextInt(100);
             float needProbability = probabilityAttack.get(inhabitantUnderAttack.getClass());
+            if (needProbability == 0) {continue;}
             if (probability <= needProbability) {
                 animal.eat(inhabitantUnderAttack);
-                iteratorInhabitant.remove();
+                inhabitantsDeath.add(inhabitantUnderAttack);
             }
+        }
+        location.inhabitants.removeAll(inhabitantsDeath);
+    }
 
+    public void deathHungryAnimals(Location location) {
+        Iterator<Inhabitant> iteratorInhabitant = location.inhabitants.iterator();
+        while (iteratorInhabitant.hasNext()) {
+            Inhabitant inhabitant = iteratorInhabitant.next();
+            if (inhabitant instanceof Animal animal) {
+                if (animal.getSatiety() < animal.getMinSatiety()) {iteratorInhabitant.remove();}
+            }
         }
     }
 
