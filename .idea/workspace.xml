@@ -6,8 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="0039d95b-3814-478f-bb39-4fe01bc23792" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/controller/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/controller/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/controller/LocationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/controller/LocationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/tasks/AnimalTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/priv/klochkov/island/tasks/AnimalTask.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/kids/count.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/kids/count.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/location/numberAnimal.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/location/numberAnimal.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -65,7 +67,7 @@
       <command value="remove" />
     </option>
   </component>
-  <component name="RunManager" selected="Application.Controller">
+  <component name="RunManager" selected="Application.App">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="priv.klochkov.island.App" />
       <module name="island" />
@@ -133,9 +135,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.App" />
         <item itemvalue="Application.Controller" />
         <item itemvalue="Application.LocationController" />
-        <item itemvalue="Application.App" />
         <item itemvalue="Application.ViewIsland" />
         <item itemvalue="Application.LocationConfig" />
       </list>
@@ -199,33 +201,28 @@
           <option name="timeStamp" value="52" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/priv/klochkov/island/controller/LocationController.java</url>
-          <line>186</line>
-          <option name="timeStamp" value="53" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/priv/klochkov/island/controller/IslandController.java</url>
-          <line>102</line>
+          <line>108</line>
           <option name="timeStamp" value="56" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/priv/klochkov/island/controller/IslandController.java</url>
-          <line>89</line>
+          <line>95</line>
           <option name="timeStamp" value="57" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/priv/klochkov/island/controller/IslandController.java</url>
-          <line>130</line>
+          <line>136</line>
           <option name="timeStamp" value="61" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/priv/klochkov/island/controller/IslandController.java</url>
-          <line>118</line>
+          <line>124</line>
           <option name="timeStamp" value="64" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/priv/klochkov/island/controller/IslandController.java</url>
-          <line>149</line>
+          <line>155</line>
           <option name="timeStamp" value="67" />
         </line-breakpoint>
       </breakpoints>

@@ -23,9 +23,9 @@ public class Controller {
     }
 
     public void start(){
-        executorService.scheduleAtFixedRate(new AnimalTask(islandController), 0, 3, TimeUnit.SECONDS);
-        //executorService.scheduleAtFixedRate(new TaskPlant(islandController), 0, 5, TimeUnit.SECONDS);
-        //executorService.scheduleAtFixedRate(new TaskView(islandController), 0, 6, TimeUnit.SECONDS);
+        executorService.scheduleAtFixedRate(new TaskView(islandController), 0, 6, TimeUnit.SECONDS);
+        executorService.scheduleAtFixedRate(new AnimalTask(islandController), 0, 6, TimeUnit.SECONDS);
+        executorService.scheduleAtFixedRate(new TaskPlant(islandController), 0, 5, TimeUnit.SECONDS);
     }
 
 

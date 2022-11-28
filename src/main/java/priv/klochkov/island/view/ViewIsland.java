@@ -32,41 +32,12 @@ public class ViewIsland {
     }
 
     public void separate() {
-        System.out.println("Finish\n\n\n\n\n");
+        System.out.println("=========================================================================================" +
+                "\n\n\n\n\n");
     }
 
 
     private String dataOneClass(String simpleNameClass, Long qualityInhabitant) {
         return String.format("%-15s %-15s", simpleNameClass, qualityInhabitant);
     }
-
-    public static void main(String[] args) {
-//        Location location = new Location(2, 2);
-//        location.inhabitants.add(new Wolf());
-//        location.inhabitants.add(new Wolf());
-//        location.inhabitants.add(new Wolf());
-//        location.inhabitants.add(new Duck());
-//        location.inhabitants.add(new Duck());
-//        location.inhabitants.add(new Goat());
-//        location.inhabitants.add(new Buffalo());
-//        location.inhabitants.add(new Caterpillar());
-//
-//        for (Map.Entry<Class<? extends Inhabitant>, Long> entry : location.getQualityInhabitant().entrySet()) {
-//            System.out.println(entry);
-//        }
-
-        Island island = new Island(3,3);
-        IslandController islandController = new IslandController();
-        islandController.setIsland(island);
-        islandController.settleAnimalsToIsland();
-        ViewIsland viewIsland = new ViewIsland(island);
-        viewIsland.printIsland();
-
-        System.out.println();
-        System.out.println();
-        System.out.println();
-        System.out.println(island.field.get(2).get(2).getQualityInhabitant());
-    }
-
-
 }

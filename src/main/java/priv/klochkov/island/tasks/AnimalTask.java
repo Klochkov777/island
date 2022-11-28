@@ -11,9 +11,9 @@ public class AnimalTask implements Runnable {
 
     @Override
     public void run() {
-        //islandController.eat();
+        islandController.eat();
         islandController.deathHungryAnimals();
-        //islandController.mate();
+        islandController.mate();
         islandController.moveAllAnimals();
     }
 }
