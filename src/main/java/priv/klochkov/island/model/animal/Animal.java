@@ -1,9 +1,11 @@
 package priv.klochkov.island.model.animal;
 
-import priv.klochkov.island.constants.Direction;
 import priv.klochkov.island.constants.Gender;
 import priv.klochkov.island.model.Inhabitant;
 import priv.klochkov.island.model.animal.interfaces.IEatable;
+
+import java.util.List;
+import java.util.Random;
 
 
 public abstract class Animal extends Inhabitant implements IEatable {
@@ -23,16 +25,20 @@ public abstract class Animal extends Inhabitant implements IEatable {
         this.maxSatiety = maxSatiety;
         this.minSatiety = maxSatiety / 2;
         this.speedMovement = speedMovement;
-        this.gender = Gender.randomGender();
+        this.gender = getRandomGender();
         this.isAlive = true;
 
     }
 
     @Override
     public void eat(Inhabitant inhabitant) {
-        if (isFullSatiety) {return;}
+        if (isFullSatiety) {
+            return;
+        }
         satiety += inhabitant.getWeight();
-        if (satiety >= maxSatiety) {isFullSatiety = true;}
+        if (satiety >= maxSatiety) {
+            isFullSatiety = true;
+        }
     }
 
     public int getSpeedMovement() {
@@ -57,6 +63,12 @@ public abstract class Animal extends Inhabitant implements IEatable {
 
     public boolean isFullSatiety() {
         return isFullSatiety;
+    }
+
+    private Gender getRandomGender() {
+        List<Gender> genders = List.of(Gender.values());
+        Random RANDOM = new Random();
+        return genders.get(RANDOM.nextInt(genders.size()));
     }
 
     @Override

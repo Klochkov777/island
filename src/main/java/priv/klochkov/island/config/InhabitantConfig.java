@@ -14,12 +14,12 @@ import java.util.List;
 import java.util.Map;
 
 public class InhabitantConfig {
-    public static List<Class<?extends Animal>> classesAnimal;
-    public static List<Class<? extends AbstractPlant>> classesPlants;
+    public static final List<Class<? extends Animal>> classesAnimal;
+    public static final List<Class<? extends AbstractPlant>> classesPlants;
     public static final List<Class<? extends Inhabitant>> classesInhabitant;
-    public static Map<Class<? extends Animal>, Map<Class<? extends Inhabitant>, Float>> dataProbability;
-    public static Map<Class<? extends Inhabitant>, Integer> maxKids;
-    public static Map<Class<? extends AbstractPlant>, Integer> qualityPlantEveryStep;
+    public static final Map<Class<? extends Animal>, Map<Class<? extends Inhabitant>, Float>> dataProbability;
+    public static final Map<Class<? extends Inhabitant>, Integer> maxKids;
+    public static final Map<Class<? extends AbstractPlant>, Integer> qualityPlantEveryStep;
     public static final Map<Class<? extends Inhabitant>, Integer> maxQualityInhabitants;
 
     static {

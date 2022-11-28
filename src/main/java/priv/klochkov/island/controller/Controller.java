@@ -27,38 +27,4 @@ public class Controller {
         executorService.scheduleAtFixedRate(new AnimalTask(islandController), 0, 6, TimeUnit.SECONDS);
         executorService.scheduleAtFixedRate(new TaskPlant(islandController), 0, 5, TimeUnit.SECONDS);
     }
-
-
-    public static void main(String[] args) throws InterruptedException {
-//        Controller controller = new Controller(2,2);
-//        ViewIsland viewIsland = new ViewIsland(controller.island);
-//        viewIsland.printIsland();
-//        System.out.println("next island");
-//        while (true){
-//        controller.islandController.moveAllAnimals();
-//            viewIsland.printIsland();
-//            System.out.println("next island");
-//        }
-
-//        Controller controller = new Controller(2,2);
-//        ViewIsland viewIsland = new ViewIsland(controller.island);
-//        viewIsland.printIsland();
-//        System.out.println("next island");
-//        while (true){
-//        controller.islandController.mate();
-//            viewIsland.printIsland();
-//            System.out.println("next island");
-//        }
-
-        Controller controller = new Controller(2,2);
-        ViewIsland viewIsland = new ViewIsland(controller.island);
-        viewIsland.printIsland();
-        System.out.println("next island");
-        while (true){
-            controller.islandController.eat();
-            viewIsland.printIsland();
-            System.out.println("next island");
-        }
-    }
-
 }

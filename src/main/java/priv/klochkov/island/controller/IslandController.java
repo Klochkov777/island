@@ -11,6 +11,7 @@ import priv.klochkov.island.view.ViewIsland;
 import java.lang.reflect.InvocationTargetException;
 import java.util.List;
 import java.util.Optional;
+import java.util.Random;
 
 import static java.util.stream.Collectors.toList;
 import static priv.klochkov.island.constants.Direction.*;
@@ -19,9 +20,11 @@ import static priv.klochkov.island.constants.Direction.UP_AND_RIGHT;
 public class IslandController {
     private Island island;
     private LocationController locationController;
+    private Random random;
 
     public IslandController() {
         this.locationController = new LocationController();
+        random = new Random();
     }
 
     public void settleAnimalsToIsland(){
@@ -151,7 +154,8 @@ public class IslandController {
     }
 
     private Direction getRandomDirection() {
-        return Direction.randomDirection();
+        List<Direction> values = List.of(Direction.values());
+        return values.get(random.nextInt(values.size()));
     }
 
     private boolean getIsCorrectDirection(Direction direction, int x, int y, Island newIsland) {
