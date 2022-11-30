@@ -48,7 +48,15 @@ public class IslandController {
 
     public void deathHungryAnimals() {
         island.field.forEach(locations -> {
-            locations.forEach(location -> {locationController.deathHungryAnimals(location);});
+            locations.forEach(location -> {locationController.setLocation(location);
+                locationController.deathHungryAnimals();});
+        });
+    }
+
+    public void setSatietyZero() {
+        island.field.forEach(locations -> {
+            locations.forEach(location -> {locationController.setLocation(location);
+                locationController.setSatietyZeroAnimals();});
         });
     }
 
@@ -65,17 +73,21 @@ public class IslandController {
     }
 
     public void growPlant() throws InvocationTargetException, NoSuchMethodException, InstantiationException, IllegalAccessException {
-        for (List<Location> list : island.field) {
-            for (Location location : list) {
-                locationController.growPlant(location);
+        synchronized (island) {
+            for (List<Location> list : island.field) {
+                for (Location location : list) {
+                    locationController.growPlant(location);
+                }
             }
         }
     }
 
     public void printIsland() {
-        ViewIsland viewIsland = new ViewIsland(island);
-        viewIsland.printIsland();
-        viewIsland.separate();
+        synchronized (island) {
+            ViewIsland viewIsland = new ViewIsland(island);
+            viewIsland.printIsland();
+            viewIsland.separate();
+        }
     }
 
     public void setIsland(Island island) {
@@ -85,19 +97,23 @@ public class IslandController {
 
 
     public void moveAllAnimals() {
-        Island newIsland = new Island(island.getLongIsland(), island.getWidthIsland());
-        for (List<Location> listLocations : island.field) {
-            for (Location oldLocation : listLocations) {
-                List<Animal> animals = locationController.getAnimalsOfLocation(oldLocation);
-                List<Animal> animalsNotMoveAble = animals.stream().filter(animal -> animal.getSpeedMovement() == 0).toList();
-                List<Animal> animalsMoveAble = animals.stream().filter(animal -> animal.getSpeedMovement() > 0).toList();
-                List<AbstractPlant> plants = locationController.getPlants(oldLocation);
-                animalsMoveAble.forEach(animal -> {moveAnimal(animal, oldLocation, newIsland);});
-                addInhabitantsToIsland(oldLocation.getX(), oldLocation.getY(), animalsNotMoveAble, newIsland);
-                addInhabitantsToIsland(oldLocation.getX(), oldLocation.getY(), plants, newIsland);
+        synchronized (island) {
+            Island newIsland = new Island(island.getLongIsland(), island.getWidthIsland());
+            for (List<Location> listLocations : island.field) {
+                for (Location oldLocation : listLocations) {
+                    List<Animal> animals = locationController.getAnimalsOfLocation(oldLocation);
+                    List<Animal> animalsNotMoveAble = animals.stream().filter(animal -> animal.getSpeedMovement() == 0).toList();
+                    List<Animal> animalsMoveAble = animals.stream().filter(animal -> animal.getSpeedMovement() > 0).toList();
+                    List<AbstractPlant> plants = locationController.getPlants(oldLocation);
+                    animalsMoveAble.forEach(animal -> {
+                        moveAnimal(animal, oldLocation, newIsland);
+                    });
+                    addInhabitantsToIsland(oldLocation.getX(), oldLocation.getY(), animalsNotMoveAble, newIsland);
+                    addInhabitantsToIsland(oldLocation.getX(), oldLocation.getY(), plants, newIsland);
+                }
             }
+            island.field = newIsland.field;
         }
-        island.field = newIsland.field;
     }
 
     private void addInhabitantsToIsland(int finishX, int finishY, List<? extends Inhabitant> inhabitants, Island newIsland) {

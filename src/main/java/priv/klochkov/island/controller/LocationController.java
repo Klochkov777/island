@@ -14,7 +14,6 @@ import priv.klochkov.island.model.island.Location;
 import priv.klochkov.island.model.plant.AbstractPlant;
 
 
-
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
 import java.util.*;
@@ -76,7 +75,9 @@ public class LocationController {
         Iterator<? extends Animal> iteratorAnimal = animals.iterator();
         while (iteratorAnimal.hasNext()) {
             Animal animal = iteratorAnimal.next();
-            if (!location.inhabitants.contains(animal)){continue;}         //уже само было съедено
+            if (!location.inhabitants.contains(animal)) {
+                continue;
+            }         //уже само было съедено
             Map<Class<? extends Inhabitant>, Float> probabilityAttack = InhabitantConfig.dataProbability.get(animal.getClass());
             huntAnimal(animal, probabilityAttack);
         }
@@ -84,12 +85,18 @@ public class LocationController {
 
     private void huntAnimal(Animal animal, Map<Class<? extends Inhabitant>, Float> probabilityAttack) {
         List<Inhabitant> inhabitantsDeath = new ArrayList<>();
-        for (Inhabitant inhabitantUnderAttack: location.inhabitants) {
-            if (animal.isFullSatiety()) {break;}
-            if (animal.getClass().equals(inhabitantUnderAttack.getClass())){continue;}
+        for (Inhabitant inhabitantUnderAttack : location.inhabitants) {
+            if (animal.isFullSatiety()) {
+                break;
+            }
+            if (animal.getClass().equals(inhabitantUnderAttack.getClass())) {
+                continue;
+            }
             int probability = random.nextInt(100);
             float needProbability = probabilityAttack.get(inhabitantUnderAttack.getClass());
-            if (needProbability == 0) {continue;}
+            if (needProbability == 0) {
+                continue;
+            }
             if (probability <= needProbability) {
                 animal.eat(inhabitantUnderAttack);
                 inhabitantsDeath.add(inhabitantUnderAttack);
@@ -98,14 +105,11 @@ public class LocationController {
         location.inhabitants.removeAll(inhabitantsDeath);
     }
 
-    public void deathHungryAnimals(Location location) {
-        Iterator<Inhabitant> iteratorInhabitant = location.inhabitants.iterator();
-        while (iteratorInhabitant.hasNext()) {
-            Inhabitant inhabitant = iteratorInhabitant.next();
-            if (inhabitant instanceof Animal animal) {
-                if (animal.getSatiety() < animal.getMinSatiety()) {iteratorInhabitant.remove();}
-            }
-        }
+    public void deathHungryAnimals() {
+        List<Animal> deathAnimals = getAnimalsOfLocation(location).stream()
+                .filter(animal -> animal.getSatiety() < animal.getMinSatiety())
+                .toList();
+        location.inhabitants.removeAll(deathAnimals);
     }
 
     public void mateAnimals() throws InvocationTargetException, NoSuchMethodException, InstantiationException, IllegalAccessException {
@@ -162,7 +166,7 @@ public class LocationController {
         for (Class<? extends AbstractPlant> clazz : InhabitantConfig.classesPlants) {
             int qualityPlant = InhabitantConfig.qualityPlantEveryStep.get(clazz);
             List<AbstractPlant> plants = FactoryInhabitant.createPlants(qualityPlant, clazz);
-                location.inhabitants.addAll(plants);
+            location.inhabitants.addAll(plants);
         }
     }
 
@@ -188,5 +192,9 @@ public class LocationController {
         return location.inhabitants.stream()
                 .filter(inhabitant -> inhabitant instanceof AbstractPlant)
                 .map(inhabitant -> (AbstractPlant) inhabitant).toList();
+    }
+
+    public void setSatietyZeroAnimals() {
+        getAnimalsOfLocation(location).forEach(animal -> animal.setSatiety(0));
     }
 }

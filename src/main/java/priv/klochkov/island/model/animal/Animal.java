@@ -71,6 +71,13 @@ public abstract class Animal extends Inhabitant implements IEatable {
         return genders.get(RANDOM.nextInt(genders.size()));
     }
 
+    public void setSatiety(float satiety) {
+        if (satiety < 0) {
+            satiety = 0;
+        }
+        this.satiety = satiety;
+    }
+
     @Override
     public String toString() {
         return "{" + this.getClass().getSimpleName() +
